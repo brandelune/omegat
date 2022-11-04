@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      <title>Appendix B. Regular expressions</title>
+      <link href="OmegaT_webhelp.css" rel="stylesheet" type="text/css" />
+      <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator" />
+      <link href="appendix.segmentation.html" rel="prev" title="Appendix A. Segmentation" />
+      <link href="appendix.glossaries.html" rel="next" title="Appendix C. Glossaries" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="_wh/jquery/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    <div id="wh-header">
+    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide DRAFT</a></div></div>
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <div id="wh-navigation-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search" role="button"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search" role="button"></span></span></div>
+        <div id="wh-toc-pane">
+        </div>
+        <div id="wh-search-pane">
+          <div id="wh-search-results">
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <header>
+         <div class="navheader">
+            <table style="width: 100%; ">
+               <tr>
+                  <th colspan="3" style="text-align: center; ">Appendix B. Regular expressions</th>
+               </tr>
+               <tr>
+                  <td style="width: 20%; text-align: left; ">
+                     <a accesskey="p" href="appendix.segmentation.html">Prev</a> </td>
+                  <th style="width: 60%; text-align: center; "> </th>
+                  <td style="width: 20%; text-align: right; "> <a accesskey="n" href="appendix.glossaries.html">Next</a>
+                  </td>
+               </tr>
+            </table>
+            <hr />
+         </div>
+      </header>
+      <section class="appendix" id="appendix.regexp">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h1 class="title">Appendix B. Regular expressions</h1>
+               </div>
+            </div>
+         </div>
+         <div class="toc">
+            <ul class="toc">
+               <li>
+                  <span class="section">
+                     <a href="appendix.regexp.html#appendix.regexp.basic.principles">Basic principles</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="section">
+                     <a href="appendix.regexp.html#appendix.regexp.examples">Examples</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="section">
+                     <a href="appendix.regexp.html#appendix.regex.tools">References</a>
+                  </span>
+               </li>
+            </ul>
+         </div>
+         <p>This appendix is intended for users interested in exploring a
+  powerful way to boost their productivity. Although seen as daunting and
+  complex, even the simplest regular expressions (often abbreviated
+  <span class="emphasis">
+               <em>regex</em>
+            </span> or <span class="emphasis">
+               <em>regexp</em>
+            </span>) are extremely
+  useful, not only in OmegaT, but in many other applications you might use
+  on a day-to-day basis.</p>
+         <p>Only the fundamentals most useful to translators are covered. The
+  <a class="link" href="appendix.regexp.html#appendix.regex.tools" title="References">References</a>
+  section at the end of this appendix provides a few starting points to
+  explore advanced or complex uses beyond the scope of this manual. If you need help for a specific case, you can also ask questions in the various support channels.</p>
+         <p>Regular expressions generally use a combination of letters, digits,
+  and symbols (collectively known as <span class="emphasis">
+               <em>characters</em>
+            </span>) to
+  define an <span class="emphasis">
+               <em>expression</em>
+            </span> that represents a specific text
+  pattern.</p>
+         <p>Here are a few examples.
+    </p>
+         <div class="variablelist">
+            <dl class="variablelist">
+               <dt>
+                  <span class="term">[0-9]</span>
+               </dt>
+               <dd>
+                  <p>Any single digit from 0 to 9.</p>
+               </dd>
+               <dt>
+                  <span class="term">\w+</span>
+               </dt>
+               <dd>
+                  <p>Represents one or more &quot;word characters&quot;, namely the
+        letters of the alphabet, digits, as well as the hyphen and
+        undescore symbols.</p>
+               </dd>
+               <dt>
+                  <span class="term">\h?</span>
+               </dt>
+               <dd>
+                  <p>Represents zero or one horizontal whitespace
+        character (this includes regular and non-breaking spaces as well as
+        tabs, but not line break characterss, which belong to the &quot;vertical
+        whitespace&quot; category (\v).)</p>
+               </dd>
+            </dl>
+         </div>
+         <p>    
+  
+         </p>
+         <p>Many OmegaT functions rely on regular expressions or make them
+    available as an option:
+
+  </p>
+         <div class="variablelist">
+            <dl class="variablelist">
+               <dt>
+                  <span class="term">Searches</span>
+               </dt>
+               <dd>
+                  <p>OmegaT searches include a <a class="link" href="windows.and.dialogs.html#windows.text.search.methods.regex">Regular
+        expressions</a> option that
+        allows you to make extremely powerful searches across your
+        files.</p>
+                  <p>The same option in the <a class="link" href="windows.and.dialogs.html#windows.text.replace" title="Text Replace">Text Replace</a> dialog allows you to apply
+        regular expressions to both the search and replaced text.</p>
+               </dd>
+               <dt>
+                  <span class="term">Custom tags</span>
+               </dt>
+               <dd>
+                  <p>Custom tags are tags defined with regular expressions that are
+        handled exactly like native OmegaT tags. See <a class="link" href="windows.and.dialogs.html#dialogs.preferences.tag.processing.regular.expressions.for.custom.tags">Regular
+	  expressions for custom tags</a>
+        for details.</p>
+                  <p>Use the <code class="code">|</code> (OR) character to separate individual
+          tag definitions.</p>
+               </dd>
+               <dt>
+                  <span class="term">Flagged fragments</span>
+               </dt>
+               <dd>
+                  <p>
+                     <a class="link" href="windows.and.dialogs.html#dialogs.preferences.tag.processing.regular.expressions.for.fragments.that.should.be.removed.from.translation">Regular
+	  expressions for fragments that should be removed from
+	  translation</a>
+        allow you to define strings that OmegaT will mark in red by default,
+        and treat as extraneous tags for validation purposes.</p>
+                  <p>Use the <code class="code">|</code> (OR) character to separate individual
+        fragment definitions.</p>
+               </dd>
+               <dt>
+                  <span class="term">Segmentation</span>
+               </dt>
+               <dd>
+                  <p>Segmentation rules and language patterns are defined with
+        regular expressions. You can modify them freely to improve the
+        segmentation of a document or add additional general rules. See
+        <a class="link" href="windows.and.dialogs.html#dialogs.preferences.segmentation.setup" title="Segmentation Setup">Segmentation
+  Setup</a> for
+        details.</p>
+                  <p>Segmentation or exception rules define the position in a
+        segment where a split will, or will not, be made. Two regular
+        expressions are required to define that position: a &quot;before&quot;
+        expression to define the text pattern ahead of where the rule should
+        apply, and an &quot;after&quot; expression to define the text pattern following
+        that position.</p>
+                  <p>A language pattern that matches the source language of the project will apply to that project.</p>
+               </dd>
+            </dl>
+         </div>
+         <p>
+  
+         </p>
+         <section class="section" id="appendix.regexp.basic.principles">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">Basic principles</h2>
+                  </div>
+               </div>
+            </div>
+            <p>Regular expressions are used to find text (including characters,
+  such as spaces, tabs, or line breaks that are not visible on the screen or
+  when printed out. Any given expression either <span class="emphasis">
+                  <em>matches</em>
+               </span>,
+	or <span class="emphasis">
+                  <em>does <span class="bold">
+                        <strong>not</strong>
+                     </span> match</em>
+               </span> a
+	word, phrase, or other sequence of text.</p>
+            <p>Each and every character in the expression is relevant when
+  determining a match.</p>
+            <p>A number of characters or combinations of characters have a special
+  meaning in a regular expression.</p>
+            <div class="warning">
+               <h3 class="title">Warning</h3>
+               <p>Text decorations such as <span class="emphasis">
+                     <em>bold</em>
+                  </span>,
+    <span class="emphasis">
+                     <em>italics</em>
+                  </span>, or other <span class="emphasis">
+                     <em>stylistic
+    effects</em>
+                  </span> cannot be matched using regular expressions.</p>
+            </div>
+            <p>There are four principles to keep in mind.</p>
+            <div class="variablelist">
+               <dl class="variablelist">
+                  <dt>
+                     <span class="term">Most characters simply match themselves</span>
+                  </dt>
+                  <dd>
+                     <p>The majority of characters in a regular expression simply
+        <span class="emphasis">
+                           <em>look for themselves</em>
+                        </span> in the text sequence.</p>
+                     <p>For example, the seven letters spelling out the word
+        &quot;<span class="emphasis">
+                           <em>example</em>
+                        </span>&quot; simply tell the search function to
+        match exactly those letters, in that order. Simply put, the search
+        just looks for the word &quot;<span class="emphasis">
+                           <em>example</em>
+                        </span>&quot;.</p>
+                  </dd>
+                  <dt>
+                     <span class="term">Letters of the alphabet preceded by a blackslash
+      (<code class="literal">\</code>) take on a special meaning</span>
+                  </dt>
+                  <dd>
+                     <p>Unlike a letter on its own, which simply represents itself as
+        noted above, a letter preceded by a <code class="literal">\</code> has a
+        special function in a regular expression.</p>
+                     <p>For example, <span class="emphasis">
+                           <em>r</em>
+                        </span> is just a normal character
+        but preceding it with <code class="literal">\</code> to make it
+        <code class="literal">\r</code> turns it into a special combination
+        that matches a  <span class="emphasis">
+                           <em>carriage return character</em>
+                        </span>.
+        Similarly, <code class="literal">\R</code> matches <span class="emphasis">
+                           <em>any line
+        break character</em>
+                        </span>).</p>
+                     <div class="note">
+                        <h3 class="title">Note</h3>
+                        <p>In the version of Java used to build OmegaT, only the
+          letters <span class="emphasis">
+                              <em>i j l m o</em>
+                           </span>, and
+          <span class="emphasis">
+                              <em>y</em>
+                           </span>, in both lower and upper case, have no
+          hidden special meaning. This manual does not describe the
+          special meanings of all the other characters. Consult the sites
+          in the <a class="link" href="appendix.regexp.html#appendix.regex.tools" title="References">References</a> section below for
+          information on combinations not covered here.</p>
+                     </div>
+                  </dd>
+                  <dt>
+                     <span class="term">Twelve characters have a special meaning by default</span>
+                  </dt>
+                  <dd>
+                     <p>To match themselves, the special effect must be
+        disabled, by a special effect character.</p>
+                     <p>For example, <code class="literal">.</code> has the default special effect of matching <span class="emphasis">
+                           <em>any one character</em>
+                        </span>.</p>
+                     <p>To find a normal period, it is necessary to disable the special
+        effect with <code class="literal">\</code>, in which case it becomes
+        <code class="literal">\.</code> and matches only a period.</p>
+                     <p>In the version of Java used to build OmegaT, those twelve characters are the <span class="emphasis">
+                           <em>backslash</em>
+                        </span>
+        
+                        <code class="literal">\</code>, the <span class="emphasis">
+                           <em>caret</em>
+                        </span>
+        
+                        <code class="literal">^</code>, the <span class="emphasis">
+                           <em>dollar sign</em>
+                        </span>
+        
+                        <code class="literal">$</code>, the <span class="emphasis">
+                           <em>period</em>
+                        </span> or
+        <span class="emphasis">
+                           <em>dot</em>
+                        </span> 
+                        <code class="literal">.</code>, the
+        <span class="emphasis">
+                           <em>vertical bar</em>
+                        </span> or <span class="emphasis">
+                           <em>pipe
+        symbol</em>
+                        </span> 
+                        <code class="literal">|</code>, the <span class="emphasis">
+                           <em>question
+        mark</em>
+                        </span> 
+                        <code class="literal">?</code>, the
+        <span class="emphasis">
+                           <em>asterisk</em>
+                        </span> or <span class="emphasis">
+                           <em>star</em>
+                        </span>
+        
+                        <code class="literal">*</code>, the <span class="emphasis">
+                           <em>plus sign</em>
+                        </span>
+        
+                        <code class="literal">+</code>, <span class="emphasis">
+                           <em>parentheses</em>
+                        </span>
+        
+                        <code class="literal">()</code>, brackets <code class="literal">[]</code>, and
+        <span class="emphasis">
+                           <em>curly braces</em>
+                        </span> 
+                        <code class="literal">{}</code>.
+          
+		  </p>
+                     <div class="variablelist">
+                        <dl class="variablelist">
+                           <dt>
+                              <span class="term">The BACKSLASH: <code class="literal">\</code>
+                              </span>
+                           </dt>
+                           <dd>
+                              <p>This character either cancels or activates the special meaning of the following character.
+              </p>
+                              <div class="example" id="d0e9724">
+                                 <div class="example-title">Example B.1. Canceling a special meaning</div>
+                                 <div class="example-contents">
+                                    <p>
+                                       <code class="literal">\.</code> = cancels the period's special
+                meaning of matching any one character, and turns it into a
+                plain period.</p>
+                                 </div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+              
+                              </p>
+                              <div class="example" id="d0e9732">
+                                 <div class="example-title">Example B.2. Activating a special meaning</div>
+                                 <div class="example-contents">
+                                    <p>
+                                       <code class="literal">\b</code> = no longer just the letter
+                &quot;b&quot;, but now rather a marker for word boundaries.</p>
+                                 </div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+            
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">The CARET: <code class="literal">^</code>
+                              </span>
+                           </dt>
+                           <dd>
+                              <p>When it is the first character in the expression, the
+            <span class="emphasis">
+                                    <em>caret</em>
+                                 </span> character matches the beginning of a line.
+              </p>
+                              <div class="example" id="d0e9751">
+                                 <div class="example-title">Example B.3. Matching the beginning of a line.</div>
+                                 <div class="example-contents">
+                                    <p>
+                                       <code class="literal">^A</code> = an uppercase A at
+                the beginning of a line.</p>
+                                 </div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+            
+                              </p>
+                              <p>When it is the first character of an expression enclosed
+            in square brackets, see below), the <span class="emphasis">
+                                    <em>caret</em>
+                                 </span>
+            negates the characters that follow.
+              </p>
+                              <div class="example" id="d0e9764">
+                                 <div class="example-title">Example B.4. Negating characters</div>
+                                 <div class="example-contents">
+                                    <p>
+                                       <code class="literal">[^abc]</code> = any characters <span class="bold">
+                                          <strong>other</strong>
+                                       </span> than &quot;a&quot;, &quot;b&quot;, or &quot;c&quot;.</p>
+                                 </div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+            
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">$</span>
+                           </dt>
+                           <dd>
+                              <p>As the last character of an expression, the DOLLAR sign matches the end of a line.
+            </p>
+                              <div class="example" id="d0e9781">
+                                 <div class="example-title">Example B.5. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong>^$</strong>
+                                    </span> = an empty line (there is
+            nothing between the beginning and the end of the
+            line).</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">.</span>
+                           </dt>
+                           <dd>
+                              <p>The PERIOD matches any one character.
+            </p>
+                              <div class="example" id="d0e9791">
+                                 <div class="example-title">Example B.6. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong>^...$</strong>
+                                    </span> = A three character
+            &quot;string&quot; between the begining and the end of a line.</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">|</span>
+                           </dt>
+                           <dd>
+                              <p>The VERTICAL BAR allows an alternative between two possibilities (OR).
+            </p>
+                              <div class="example" id="d0e9801">
+                                 <div class="example-title">Example B.7. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong>^An |^The </strong>
+                                    </span> = the
+            string &quot;An &quot; OR the string &quot;The &quot; at the beginning of a
+            line.</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">?</span>
+                           </dt>
+                           <dd>
+                              <p>The QUESTION MARK quantifies the expression that preceeds it as
+            0 or 1 instances of that expression.
+            </p>
+                              <div class="example" id="d0e9811">
+                                 <div class="example-title">Example B.8. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong> an? </strong>
+                                    </span> = a
+            space, followed by a, followed by 0 or 1 n, followed by a
+            space.</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">*</span>
+                           </dt>
+                           <dd>
+                              <p>The ASTERISK quantifies the expressions that preceeds it as 0 or
+            MORE instances of that expression.</p>
+                              <div class="example" id="d0e9821">
+                                 <div class="example-title">Example B.9. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong>\w+</strong>
+                                    </span> = 0 or more WORD
+            characters.</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">+</span>
+                           </dt>
+                           <dd>
+                              <p>The PLUS quantifies the expression that preceeds it as 1 or MORE
+            instances of that expression.
+            </p>
+                              <div class="example" id="d0e9831">
+                                 <div class="example-title">Example B.10. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong>[\h\v]+</strong>
+                                    </span> = 1 or MORE
+            instances of either an horizontal white space or a vertical white
+            space.</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">(</span>
+                           </dt>
+                           <dd>
+                              <p>The OPENING PARENTHESIS opens a group that must be closed by a
+            CLOSING PARENTHESIS. The group contents is memorized and can be called
+            by a special effect number.
+            </p>
+                              <div class="example" id="d0e9841">
+                                 <div class="example-title">Example B.11. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong>(\b\w+\b)\h\1\b</strong>
+                                    </span> = a group of
+            1 or more WORD characters that begin at a word boundary (\b) and ends
+            at a word boundary (the second \b). That group defines a word, that is
+            followed by an horizontal white space, followed by the contents of the
+            group (the word), before a word boundary, which means, a word followed
+            by itself.</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">)</span>
+                           </dt>
+                           <dd>
+                              <p>The CLOSING PARENTHESIS closes a group and cannot be used on its
+            own without triggering an error.</p>
+                           </dd>
+                           <dt>
+                              <span class="term">[</span>
+                           </dt>
+                           <dd>
+                              <p>The OPENING SQUARE BRACKET opens a range of characters which
+            must be closed by a CLOSING SQUARE BRACKET.
+            </p>
+                              <div class="example" id="d0e9857">
+                                 <div class="example-title">Example B.12. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong>li[cs]en[cs]e</strong>
+                                    </span> = all the instances of a misspelled license.</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                           <dt>
+                              <span class="term">{</span>
+                           </dt>
+                           <dd>
+                              <p>The OPENING CURLY BRACE opens a quantifier that must be closed
+            by a CLOSING CURLY BRACE. The quantifier can be an exact number, a
+            minimum, a maximum or a range.
+            </p>
+                              <div class="example" id="d0e9867">
+                                 <div class="example-title">Example B.13. </div>
+                                 <div class="example-contents">
+                                    <span class="bold">
+                                       <strong>\d{4}/\d{1,}</strong>
+                                    </span> = 4 digits
+            followed by a / followed by at least 1digit.</div>
+                              </div>
+                              <p>
+                                 <br class="example-break" />
+                              </p>
+                           </dd>
+                        </dl>
+                     </div>
+                     <p>
+    
+                     </p>
+                  </dd>
+                  <dt>
+                     <span class="term">The character <span class="emphasis">
+                           <em>\</em>
+                        </span> is a very special character</span>
+                  </dt>
+                  <dd>
+                     <p>As you have seen above, the character <span class="emphasis">
+                           <em>\</em>
+                        </span> has a special effect by default and that special effect is to either trigger or disable special effects in other characters. When it preceeds a character that has no special effect (neither natural nor hidden), it has no effect.</p>
+                     <p>
+                        <span class="emphasis">
+                           <em>\</em>
+                        </span> can be disabled by another <span class="emphasis">
+                           <em>\</em>
+                        </span>, in which case it becomes <span class="emphasis">
+                           <em>\\</em>
+                        </span> and matches what is called a <span class="emphasis">
+                           <em>backslash</em>
+                        </span>.</p>
+                  </dd>
+               </dl>
+            </div>
+            <div class="table" id="appendix.regex.characters">
+               <div class="table-title">Table B.1. Characters</div>
+               <div class="table-contents">
+                  <table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; ">
+                     <colgroup>
+                        <col style="text-align: left; " />
+                        <col />
+                     </colgroup>
+                     <thead>
+                        <tr>
+                           <th style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">Expression</th>
+                           <th style="text-align: left; border-bottom: 1px solid ; ">Match</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">x</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">The character x itself
+		  <p>Most characters match themselves.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\t</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">The tab character
+		  <p>The \ triggers the special effect &quot;this is a tab, not a t&quot;.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\n</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">The newline (line feed) character
+		  <p>The \ triggers the special effect &quot;this is a newline, not a n&quot;.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; ">\r</td>
+                           <td style="text-align: left; ">The carriage-return character
+		  <p>\R is any linebreak character.</p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <br class="table-break" />
+            <div class="table" id="appendix.regex.classes">
+               <div class="table-title">Table B.2. Classes and case</div>
+               <div class="table-contents">
+                  <div class="note">
+                     <h3 class="title">Note</h3>
+                     <p>In OmegaT a search is by default case-insensitive: it will match upper-case characters as well as lower-case characters. You can enable case sensitivity as an option for the whole search, but if you want finer settings you can mix <span class="bold">
+                           <strong>(?i)</strong>
+                        </span> before case-insensitive parts and <span class="bold">
+                           <strong>(?-i)</strong>
+                        </span> before case sensitive parts.</p>
+                  </div>
+                  <table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; ">
+                     <colgroup>
+                        <col style="text-align: left; " />
+                        <col />
+                     </colgroup>
+                     <thead>
+                        <tr>
+                           <th style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">Expression</th>
+                           <th style="text-align: left; border-bottom: 1px solid ; ">Match</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\w</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">A word character, generaly defined as [A-Za-z0-9_] but in Java as [\p{Alpha}\p{gc=Mn}\p{gc=Me}\p{gc=Mc}\p{Digit}\p{gc=Pc}\p{IsJoin_Control}].
+		  <p>\W is NOT a word character ([^\w]).</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\d</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">A digit, generaly defined as [0-9].
+		  <p>\D is NOT a digit.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\s</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">A white space that includes spaces, tabs, line breaks, etc.
+		  <p>\S is NOT a white-space character ([^\s]).</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\h and \v</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">Horizontal and vertical white space (generally prefered to \s).
+		  <p>\H is NOT an horizontal white space and \V is NOT a vertical white space.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">[abc]</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">a, b, or c
+		  <p>A simple class is described by any number characters between [ and ]</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">[C-X]</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">A character among the &quot;C through X&quot; letters set
+		  <p>A range is described by a character that starts a series, followed by a hyphen, followed by a character that ends the series. Any number of ranges can be defined this way: [a-zA-Z0-9]. A hyphen that is outside a series is a hyphen: [a-z-].</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">[^\n\r\t]</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">Any character <span class="emphasis">
+                                 <em>except</em>
+                              </span> a newline, a carriage-return, or a tabulation
+		  <p>The CARET excludes what follows it.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; ">(?i)o(?-i)megat</td>
+                           <td style="text-align: left; ">A case insensitive &quot;o&quot; followed by a case sensitive &quot;megat&quot;.
+		  <p>The HYPHEN cancels the &quot;case insensitive&quot; mode.</p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <br class="table-break" />
+         </section>
+         <div class="table" id="appendix.regex.unicode.blocs">
+            <div class="table-title">Table B.3. Unicode blocks, scripts and
+  categories</div>
+            <div class="table-contents">
+               <table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; ">
+                  <colgroup>
+                     <col style="text-align: left; " />
+                     <col />
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">Expression</th>
+                        <th style="text-align: left; border-bottom: 1px solid ; ">Match</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\p{InGreek}</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">A character in the Greek block (simple <a class="ulink" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#ubc" target="_top">
+        block</a>)</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\P{InGreek}</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">A character NOT in the Greek block</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\p{IsHan}</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">A Han character as found in CJK languages (simple <a class="ulink" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#usc" target="_top">
+        script</a>)</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\p{Lu}</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">An uppercase letter (simple <a class="ulink" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#ubc" target="_top">
+        category</a>)</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; ">\p{Sc}</td>
+                        <td style="text-align: left; ">A currency symbol</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break" />
+         <div class="table" id="appendix.regex.boundary.matchers">
+            <div class="table-title">Table B.4. Locations</div>
+            <div class="table-contents">
+               <p>Locations (boundaries) are not part of the match. They just specify
+  where the match should be.</p>
+               <table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; ">
+                  <colgroup>
+                     <col style="text-align: left; " />
+                     <col />
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">Expression</th>
+                        <th style="text-align: left; border-bottom: 1px solid ; ">Match</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">^</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">The beginning of the line</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">$</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">The end of the line</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\b</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">A word boundary</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\B</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">NOT a word boundary</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">(?=u)</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">Before the character &quot;u&quot;</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">(?!u)</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">NOT before the character &quot;u&quot;</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">(?&lt;=q)</td>
+                        <td style="text-align: left; border-bottom: 1px solid ; ">After the character &quot;q&quot;</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left; border-right: 1px solid ; ">(?&lt;!q)</td>
+                        <td style="text-align: left; ">NOT after the character &quot;q&quot;</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break" />
+         <section class="section" id="appendix.regexp.examples">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">Examples</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="table" id="regex.examples">
+               <div class="table-title">Table B.5. Examples of regular expressions
+	that use the expressions above</div>
+               <div class="table-contents">
+                  <table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; ">
+                     <colgroup>
+                        <col style="text-align: left; " />
+                        <col />
+                     </colgroup>
+                     <thead>
+                        <tr>
+                           <th style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">Regular expression</th>
+                           <th style="text-align: left; border-bottom: 1px solid ; ">Finds the following:</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">(\b\w+\b)\s\1\b</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">double words</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">[\.,]\s*[\.,]+</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">comma or a period, followed by spaces and yet another comma
+          or period</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\. \s+$</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">extra spaces after the period at the end of the line</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\s+a\s+[aeiou]</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">English: words, beginning with vowels, should generally be
+          preceded by &quot;an&quot;, not &quot;a&quot;</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\s+an\s+[^aeiou]</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">English: the same check as above, but concerning consonants
+          (&quot;a&quot;, not &quot;an&quot;)</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\s{2,}</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">more than one space</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; border-bottom: 1px solid ; ">\.[A-Z]</td>
+                           <td style="text-align: left; border-bottom: 1px solid ; ">Period, followed by an upper-case letter - possibly a space
+          is missing between the period and the start of a new
+          sentence?</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left; border-right: 1px solid ; ">\bis\b</td>
+                           <td style="text-align: left; ">search for “is”, not “this” or “isn't” etc.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <br class="table-break" />
+         </section>
+         <section class="section" id="appendix.regex.tools">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">References</h2>
+                  </div>
+               </div>
+            </div>
+            <p>Although OmegaT does not offer fancy coloring for your regular
+  expressions, you can get a lot of practice by using the <a class="link" href="windows.and.dialogs.html#windows.text.search" title="Text Search">Text Search</a> window since OmegaT does color the matching results.</p>
+            <p>The Java technical reference is useful as a canonical reference.
+
+  </p>
+            <div class="variablelist">
+               <dl class="variablelist">
+                  <dt id="appendix.regex.java">
+                     <span class="term" id="appendix.regex.java.title">
+                        <a class="ulink" href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html" target="_top">Java Regex
+	  documentation</a>
+                     </span>
+                  </dt>
+                  <dd>
+                     <p>The official reference for regular expressions used in
+	  Java.</p>
+                  </dd>
+               </dl>
+            </div>
+            <p>
+  
+  If you want to know more about regular expressions, the two following ressources have also proved very useful:
+
+  </p>
+            <div class="variablelist">
+               <dl class="variablelist">
+                  <dt id="appendix.regex.tools.regex101">
+                     <span class="term" id="appendix.regex.tools.regex101.title">
+                        <a class="ulink" href="https://regex101.com" target="_top">https://regex101.com</a>
+                     </span>
+                  </dt>
+                  <dd>
+                     <p>An online regular expression matcher where you enter the text you want to practice on and the regular expressions that you want to try.</p>
+                  </dd>
+                  <dt id="appendix.regex.tools.regular.expression.info">
+                     <span class="term" id="appendix.regex.tools.regular.expression.info.title">
+                        <a class="ulink" href="https://www.regular-expressions.info" target="_top">https://www.regular-expressions.info</a>
+                     </span>
+                  </dt>
+                  <dd>
+                     <p>One of the most thorough regular expression reference on the web.</p>
+                  </dd>
+               </dl>
+            </div>
+            <p>
+
+  OmegaT does not support either site in any way and if you find interesting references in your language, we would love to hear about them.
+  </p>
+         </section>
+      </section>
+      <footer>
+         <div class="navfooter">
+            <hr />
+            <table style="width: 100%; ">
+               <tr>
+                  <td style="width: 40%; text-align: left; ">
+                     <a accesskey="p" href="appendix.segmentation.html">Prev</a> </td>
+                  <td style="width: 20%; text-align: center; "> </td>
+                  <td style="width: 40%; text-align: right; "> <a accesskey="n" href="appendix.glossaries.html">Next</a>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="width: 40%; text-align: left; vertical-align: top; ">Appendix A. Segmentation </td>
+                  <td style="width: 20%; text-align: center; ">
+                     <a accesskey="h" href="index_.html">Home</a>
+                  </td>
+                  <td style="width: 40%; text-align: right; vertical-align: top; "> Appendix C. Glossaries</td>
+               </tr>
+            </table>
+         </div>
+      </footer>
+   </div>
+    </div>
+
+    
+  </body></html>

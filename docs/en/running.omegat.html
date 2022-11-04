@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      <title>Run OmegaT</title>
+      <link href="OmegaT_webhelp.css" rel="stylesheet" type="text/css" />
+      <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator" />
+      <link href="installing.omegat.html" rel="prev" title="Install OmegaT" />
+      <link href="menus.html" rel="next" title="Menus" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="_wh/jquery/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    <div id="wh-header">
+    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide DRAFT</a></div></div>
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <div id="wh-navigation-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search" role="button"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search" role="button"></span></span></div>
+        <div id="wh-toc-pane">
+        </div>
+        <div id="wh-search-pane">
+          <div id="wh-search-results">
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <header>
+         <div class="navheader">
+            <table style="width: 100%; ">
+               <tr>
+                  <th colspan="3" style="text-align: center; ">Run
+  OmegaT</th>
+               </tr>
+               <tr>
+                  <td style="width: 20%; text-align: left; ">
+                     <a accesskey="p" href="installing.omegat.html">Prev</a> </td>
+                  <th style="width: 60%; text-align: center; "> </th>
+                  <td style="width: 20%; text-align: right; "> <a accesskey="n" href="menus.html">Next</a>
+                  </td>
+               </tr>
+            </table>
+            <hr />
+         </div>
+      </header>
+      <section class="chapter" id="running.omegat">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h1 class="title">Run
+  OmegaT</h1>
+               </div>
+            </div>
+         </div>
+         <div class="toc">
+            <ul class="toc">
+               <li>
+                  <span class="section">
+                     <a href="running.omegat.html#running.omegat.on.windows">On Windows</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="section">
+                     <a href="running.omegat.html#running.omegat.on.linux">On Linux</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="section">
+                     <a href="running.omegat.html#running.omegat.on.macos">On macOS</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="section">
+                     <a href="running.omegat.html#running.omegat.on.other.systems">On other platforms</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="section">
+                     <a href="running.omegat.html#launch.with.command.line">Command line launch</a>
+                  </span>
+                  <ul>
+                     <li>
+                        <span class="section">
+                           <a href="running.omegat.html#launch.with.command.line.tutorial">Simplified
+	  overview</a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="section">
+                           <a href="running.omegat.html#launch.with.command.line.omegat.terminal.command.syntax">Command syntax</a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="section">
+                           <a href="running.omegat.html#launch.with.command.line.java.parameters">Java
+	  parameters</a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="section">
+                           <a href="running.omegat.html#launch.with.command.line.omegat.parameters">OmegaT
+	  parameters</a>
+                        </span>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <section class="section" id="running.omegat.on.windows">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">On Windows</h2>
+                  </div>
+               </div>
+            </div>
+            <p>The simplest way to launch OmegaT is to execute the
+	<code class="filename">OmegaT.exe</code> program. The options for the program
+	start-up will be read from the <code class="filename">OmegaT.l4J.ini</code> file,
+	which resides in the same folder as the exe file and which you can edit
+	to reflect your setup. The following example for the INI file reserves 1
+	GB of memory, requests French as the user language and Canada as the
+	country:</p>
+            <pre class="programlisting"># OmegaT.exe runtime configuration
+	# To use a parameter, remove the '#' before the '-'
+	# Memory
+	-Xmx1024M
+	# Language
+	-Duser.language=FR
+	# Country
+	-Duser.country=CA</pre>
+            <p>Advice: if OmegaT works slowly in Remote Desktop sessions under
+	Windows, you may use this option:</p>
+            <pre class="programlisting">-Dsun.java2d.noddraw=false</pre>
+         </section>
+         <section class="section" id="running.omegat.on.linux">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">On Linux</h2>
+                  </div>
+               </div>
+            </div>
+            <p>You can launch OmegaT from the command line with a script that
+	includes start-up options. See <a class="link" href="running.omegat.html#launch.with.command.line" title="Command line launch">Command line launch</a> for details.</p>
+            <p>You can also click on <code class="filename">OmegaT.jar</code> to launch it
+	directly if the <code class="filename">.jar</code> extension is associated to the
+	system Java launcher.</p>
+            <p>The package also provides a <code class="filename">omegat.kaptn</code>
+	Kaptain script, which KDE users might find useful, as well as an
+	<code class="filename">OmegaT</code> bash script that automatically launches the
+	appropriate <span class="application">java</span> command to run
+	OmegaT.</p>
+         </section>
+         <section class="section" id="running.omegat.on.macos">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">On macOS</h2>
+                  </div>
+               </div>
+            </div>
+            <p>Double-click on <code class="filename">OmegaT.app</code> or click on its
+	location in the Dock.</p>
+            <p>
+               <code class="filename">OmegaT.app</code> comes with an
+	<code class="filename">OmegaT</code> executable located in
+	<code class="filename">OmegaT.app/Contents/MacOS/</code> that you can also use to
+	launch multiple instances of <code class="filename">OmegaT.app</code>.</p>
+            <p>And it also comes with the generic <code class="filename">OmegaT.jar</code>
+	file located in <code class="filename">OmegaT.app/Contents/MacOS/Java/</code> that
+	you can use to launch OmegaT from the command line. See <a class="link" href="running.omegat.html#launch.with.command.line" title="Command line launch">Command line launch</a> for details.</p>
+            <p>You can modify the behavior of OmegaT.app by editing the
+	<code class="filename">Configuration.properties</code> (OmegaT configuration) as
+	well as the <code class="filename">Info.plist</code> (Java configuration) files
+	located inside the OmegaT.app package.</p>
+            <p>
+               <code class="filename">Configuration.properties</code> is located in
+	<code class="filename">Contents/Resources/</code>.
+	<code class="filename">Info.plist</code> is located in
+	<code class="filename">Contents/</code>.</p>
+            <div class="note">
+               <h3 class="title">Note</h3>
+               <p>To access the files inside <code class="filename">OmegaT.app</code>,
+	right-click on <code class="filename">OmegaT.app</code> and select &quot;Show Package
+	Contents&quot;.</p>
+            </div>
+            <p>Right-click on the file you want to modify and select your text
+	editor of choice or <span class="command">
+                  <strong>cd</strong>
+               </span> there directly from the
+	command line and open the files from the command line.</p>
+            <p>OmegaT's configuration is changed by modifying
+	<code class="filename">Configuration.properties</code>.</p>
+            <p>For predefined options, remove the <code class="literal">#</code> before a
+	parameter to enable it. For example, <code class="literal">user.language=ja</code>
+	(without the <code class="literal">#</code>) will launch OmegaT with the user
+	interface in Japanese.</p>
+            <p>The Java configuration is changed by modifying
+	<code class="filename">Info.plist</code>.</p>
+            <p>For example, to change the amount of memory available uncomment
+	the line <code class="literal">&lt;!-- &lt;string&gt;-Xmx6g&lt;/string&gt;
+	--&gt;</code> by removing the <code class="literal">&lt;!--</code> and
+	<code class="literal">--&gt;</code>. This will launch OmegaT with 6 GB of memory;
+	change the <code class="literal">6g</code> to the desired amount.</p>
+            <div class="note">
+               <h3 class="title">Note</h3>
+               <p>
+                  <code class="filename">OmegaT.app</code> can make use of macOS Services.
+	You can also use AppleScript, Automator or Shortcuts to create
+	Services or scripts that will automate frequent actions.</p>
+            </div>
+         </section>
+         <section class="section" id="running.omegat.on.other.systems">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">On other platforms</h2>
+                  </div>
+               </div>
+            </div>
+            <p>Methods vary from one system to another, but in general, once OmegaT
+	is installed, you can launch it directly from the command line.  See <a class="link" href="running.omegat.html#launch.with.command.line" title="Command line launch">Command line launch</a> for details.</p>
+            <p>You can
+	create a script that includes the desired command line launch
+	parameters. If <code class="filename">.jar</code> files are properly associated
+	with Java 8 Runtime Environment and your PATH settings are correct, you can also
+	simply click (or double-click) on <code class="filename">OmegaT.jar</code> to
+	launch it directly.</p>
+            <p>Consult the documentation for your system for more
+	information.</p>
+         </section>
+         <section class="section" id="launch.with.command.line">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">Command line launch</h2>
+                  </div>
+               </div>
+            </div>
+            <p>Using the command line allows you to set various options that control or
+	modify the behaviour of the application. You can also define and save sets of
+	options in scripts that you can then use to launch OmegaT for a particular
+	purpose.</p>
+            <section class="section" id="launch.with.command.line.tutorial">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title">Simplified
+	  overview</h3>
+                     </div>
+                  </div>
+               </div>
+               <p>Before graphical interfaces became common, users interacted with
+	  computers via a command line interface (CLI), which requires typing
+	  commands to give instructions to the computer. On modern systems, the
+	  CLI is accessed through an application generally called a
+	  &quot;terminal&quot; or &quot;console&quot;. For the sake of simplicity,
+	  this manual refers to it as the terminal.</p>
+               <div class="note">
+                  <h3 class="title">Note</h3>
+                  <p>On Windows, you can use either the <span class="application">Command
+	  Prompt</span> or <span class="application">Powershell</span> as a
+	  terminal. Both are available from the <span class="guilabel">System Tools</span>
+	  folder of the <span class="guilabel">Start Menu</span>. The macOS equivalent is
+	  the <span class="application">Terminal</span> application located in the
+	  <code class="filename">Utilities</code> folder of the
+	  <code class="filename">Applications</code> main folder. On Linux, the default
+	  terminal application for your distribution should be available from the
+	  application menu or one of its submenus.</p>
+               </div>
+               <p>In the terminal, you type commands and their associated parameters
+	  to perform tasks. This makes it easy to perform certain tasks that would
+	  be difficult to perform using a graphical interface.</p>
+               <p>A key concept to remember when using the command line for OmegaT
+	  is that you typically have to type the full location to the OmegaT
+	  program on your system as the command, because the system does not know
+	  where to find it by default. </p>
+               <div class="note">
+                  <h3 class="title">Note</h3>
+                  <p>The syntax used to specify the location of an application or
+		folder depends on the platform. On Windows, the (<code class="code">\</code>
+		character is used to separate folder and file names, while macOS and
+		Linux the <code class="code">/</code> to do so. The typical default locations for
+		each major platform are presented below.
+		</p>
+                  <div class="variablelist">
+                     <dl class="variablelist">
+                        <dt id="launch.with.command.line.windows">
+                           <span class="term" id="launch.with.command.line.windows.title">Windows</span>
+                        </dt>
+                        <dd>
+                           <p>
+                              <code class="filename">C:\Program Files\OmegaT</code>
+                           </p>
+                        </dd>
+                        <dt id="launch.with.command.line.macos">
+                           <span class="term" id="launch.with.command.line.macos.title">Macos</span>
+                        </dt>
+                        <dd>
+                           <p>
+                              <code class="filename">/Applications/OmegaT</code>
+                           </p>
+                        </dd>
+                        <dt id="launch.with.command.line.linux">
+                           <span class="term" id="launch.with.command.line.linux.title">Linux</span>
+                        </dt>
+                        <dd>
+                           <p>
+                              <code class="filename">/opt/omegat</code>
+                           </p>
+                        </dd>
+                     </dl>
+                  </div>
+                  <p>
+		
+                  </p>
+               </div>
+            </section>
+            <section class="section" id="launch.with.command.line.omegat.terminal.command.syntax">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title">Command syntax</h3>
+                     </div>
+                  </div>
+               </div>
+               <p>The syntax to launch OmegaT from the terminal is:
+	  </p>
+               <pre class="programlisting">java -jar &lt;java parameters&gt; OmegaT.jar &lt;OmegaT parameters&gt; </pre>
+               <p>
+		
+               </p>
+               <div class="variablelist">
+                  <dl class="variablelist">
+                     <dt id="launch.with.command.line.java.jar">
+                        <span class="term" id="launch.with.command.line.java.jar.title">java -jar</span>
+                     </dt>
+                     <dd>
+                        <p>This command starts the Java Virtual Machine (JVM)
+			  and runs the .jar package specified after, OmegaT in
+			  this example.</p>
+                     </dd>
+                     <dt id="launch.with.command.line.intro.java.parameters">
+                        <span class="term" id="launch.with.command.line.intro.java.parameters.title">
+                           <span class="emphasis">
+                              <em>&lt;java parameters&gt;</em>
+                           </span>
+                        </span>
+                     </dt>
+                     <dd>
+                        <p>Optional parameters accepted by the
+			  <span class="command">
+                              <strong>java</strong>
+                           </span> command. The parameters relevant
+			  to running OmegaT are described <a class="link" href="running.omegat.html#launch.with.command.line.java.parameters" title="Java parameters">below</a>
+                        </p>
+                     </dd>
+                     <dt id="launch.with.command.line.intro.omegat.jar">
+                        <span class="term" id="launch.with.command.line.intro.omegat.jar.title">OmegaT.jar</span>
+                     </dt>
+                     <dd>
+                        <p>The OmegaT java executable.</p>
+                     </dd>
+                     <dt id="launch.with.command.line.intro.omegat.parameters">
+                        <span class="term" id="launch.with.command.line.intro.omegat.parameters.title">
+                           <span class="emphasis">
+                              <em>&lt;OmegaT parameters&gt;</em>
+                           </span>
+                        </span>
+                     </dt>
+                     <dd>
+                        <p>The options specific to OmegaT are described <a class="link" href="running.omegat.html#launch.with.command.line.omegat.parameters" title="OmegaT parameters">later
+			  in this section</a>
+                        </p>
+                     </dd>
+                  </dl>
+               </div>
+               <p>
+	  
+               </p>
+            </section>
+            <section class="section" id="launch.with.command.line.java.parameters">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title">Java
+	  parameters</h3>
+                     </div>
+                  </div>
+               </div>
+               <p>The list below presents parameters for the <span class="command">
+                     <strong>java</strong>
+                  </span>
+	  that can be useful when working with OmegaT.
+	  </p>
+               <div class="variablelist">
+                  <dl class="variablelist">
+                     <dt id="launch.with.command.line.user.interface.language">
+                        <span class="term" id="launch.with.command.line.user.interface.language.title">User interface language</span>
+                     </dt>
+                     <dd>
+                        <p>
+                           <code class="code">-Duser.language=LL</code>
+                        </p>
+                        <p>Replace <code class="code">LL</code> with the desired
+			two-letter language code from the <a class="ulink" href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_top">ISO
+			639.1</a> list.</p>
+                        <p>Using this option will launch OmegaT with the user
+			interface in that language, if available (even
+			partially). If the language is not available, OmegaT
+			defaults to English even if the system uses a different
+			default language.</p>
+                     </dd>
+                     <dt id="launch.with.command.line.user.country">
+                        <span class="term" id="launch.with.command.line.user.country.title">User country</span>
+                     </dt>
+                     <dd>
+                        <p>
+                           <code class="code">-Duser.country=CC</code>
+                        </p>
+                        <p>Replace <code class="code">CC</code> with the desired
+			two-letter country code from the <a class="ulink" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_top">ISO
+			3166-1 alpha-2</a> list.</p>
+                        <p>This option combines with the previous user
+			interface language parameter to specify a regional
+			variant. If that variant is not available, the user
+			interface follows the same priority as above.</p>
+                     </dd>
+                     <dt id="launch.with.command.line.maximum.memory.assignment">
+                        <span class="term" id="launch.with.command.line.maximum.memory.assignment.title">Maximum memory assignment</span>
+                     </dt>
+                     <dd>
+                        <p>
+                           <code class="code">-XmxSIZE</code>
+                        </p>
+                        <p>Replace <code class="code">SIZE</code> is a number of bytes in
+			multiples of 1024 and at least 2 MB, followed by
+			<code class="code">k</code> for kilobyte, <code class="code">m</code> for
+			megabyte, or <code class="code">g</code> for gigabyte.</p>
+                     </dd>
+                     <dt id="launch.with.command.line.proxy.host.ip.address">
+                        <span class="term" id="launch.with.command.line.proxy.host.ip.address.title">Proxy host ip address</span>
+                     </dt>
+                     <dd>
+                        <p>
+                           <code class="code">-Dhttp.proxyHost=.</code>
+                        </p>
+                        <p>Replace <code class="code">.</code> with the IP address of
+			your proxy server, if your system uses one.</p>
+                     </dd>
+                     <dt id="launch.with.command.line.proxy.host.port.number">
+                        <span class="term" id="launch.with.command.line.proxy.host.port.number.title">Proxy host port number</span>
+                     </dt>
+                     <dd>
+                        <p>
+                           <code class="code">-Dhttp.proxyPort=.</code>
+                        </p>
+                        <p>Replace <code class="code">.</code> with the port number your
+			system uses to access the proxy server.</p>
+                     </dd>
+                  </dl>
+               </div>
+               <p>
+	  
+               </p>
+            </section>
+            <section class="section" id="launch.with.command.line.omegat.parameters">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title">OmegaT
+	  parameters</h3>
+                     </div>
+                  </div>
+               </div>
+               <p>You can also get a list of these options in the terminal with the
+	  <span class="command">
+                     <strong>java -jar OmegaT.jar --help</strong>
+                  </span>
+	  command. The OmegaT GUI is launched if no option is specified.</p>
+               <p>		
+		
+               </p>
+               <div class="variablelist">
+                  <dl class="variablelist">
+                     <dt id="launch.with.command.line.general.options.">
+                        <span class="term" id="launch.with.command.line.general.options.title">General options:</span>
+                     </dt>
+                     <dd>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt id="launch.with.command.line.h.help">
+                                 <span class="term" id="launch.with.command.line.h.help.title">-h, --help</span>
+                              </dt>
+                              <dd>
+                                 <p>Show usage information.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.path.to.an.omegat.project">
+                                 <span class="term" id="launch.with.command.line.path.to.an.omegat.project.title">path to an omegat project</span>
+                              </dt>
+                              <dd>
+                                 <p>Launch the GUI and load the specified
+					project</p>
+                              </dd>
+                              <dt id="launch.with.command.line.remote.project.">
+                                 <span class="term" id="launch.with.command.line.remote.project.title">--remote-project
+				  <span class="emphasis">
+                                       <em>&lt;path-to-omegat-project-file&gt;</em>
+                                    </span>
+                                 </span>
+                              </dt>
+                              <dd>
+                                 <p>Download the OmegaT project from the
+					specified URL specified in
+					<span class="emphasis">
+                                       <em>&lt;path-to-omegat-project-file&gt;</em>
+                                    </span>,
+					and load it.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.no.team">
+                                 <span class="term" id="launch.with.command.line.no.team.title">--no-team</span>
+                              </dt>
+                              <dd>
+                                 <p>Disable team project
+					functionality. Use this option if you want
+					to prevent OmegaT from synchronizing the
+					project contents.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.team.init">
+                                 <span class="term" id="launch.with.command.line.team.init.title">team init <span class="emphasis">
+                                       <em>SL</em>
+                                    </span>
+				  
+                                    <span class="emphasis">
+                                       <em>TL</em>
+                                    </span>
+                                 </span>
+                              </dt>
+                              <dd>
+                                 <p>Initialize a team project using
+					<span class="emphasis">
+                                       <em>SL</em>
+                                    </span> and
+					<span class="emphasis">
+                                       <em>TL</em>
+                                    </span> as the source and
+					target two-letter language codes,
+					respectively. </p>
+                              </dd>
+                              <dt id="launch.with.command.line.disable.project.locking">
+                                 <span class="term" id="launch.with.command.line.disable.project.locking.title">--disable-project-locking</span>
+                              </dt>
+                              <dd>
+                                 <p>Do not lock the omegat.project file.</p>
+                                 <p>On some platforms, the omegat.project
+					file is locked by default and attempting to
+					open an already open project in another
+					instance of OmegaT results in an error. This
+					option prevents that error.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.disable.location.save">
+                                 <span class="term" id="launch.with.command.line.disable.location.save.title">--disable-location-save</span>
+                              </dt>
+                              <dd>
+                                 <p>Do not remember the last directory
+					opened in the file picker.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.itokenizer.lt.classname.gt.">
+                                 <span class="term" id="launch.with.command.line.itokenizer.lt.classname.gt.title">--ITokenizer=&lt;classname&gt;, </span>
+                                 <span class="term">--ITokenizerTarget=&lt;classname&gt;</span>
+                              </dt>
+                              <dd>
+                                 <p>Specify a source- or target-language
+					tokenizer (using this option overrides
+					project settings). See
+					OmegaT.jar/META-INF/MANIFEST.MF for valid
+					values.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.config.dir.">
+                                 <span class="term" id="launch.with.command.line.config.dir.title">--config-dir=<span class="emphasis">
+                                       <em>&lt;path&gt;</em>
+                                    </span>
+                                 </span>
+                              </dt>
+                              <dd>
+                                 <p>The directory used to read and write
+					OmegaT configuration files.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.config.file.">
+                                 <span class="term" id="launch.with.command.line.config.file.title">--config-file=<span class="emphasis">
+                                       <em>&lt;path&gt;</em>
+                                    </span>
+                                 </span>
+                              </dt>
+                              <dd>
+                                 <p>A Java .properties file from which to
+					load default settings.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.resource.bundle.">
+                                 <span class="term" id="launch.with.command.line.resource.bundle.title">--resource-bundle=<span class="emphasis">
+                                       <em>&lt;path&gt;</em>
+                                    </span>
+                                 </span>
+                              </dt>
+                              <dd>
+                                 <p>A Java .properties file to use for interface text.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.mode.console.translate.console.pseudotranslatetmx.console.align.">
+                                 <span class="term" id="launch.with.command.line.mode.console.translate.console.pseudotranslatetmx.console.align.title">--mode=[console mode name]</span>
+                              </dt>
+                              <dd>
+                                 <p>Specify a mode other than the GUI default.The following
+					options are available:</p>
+                                 <div class="variablelist">
+                                    <dl class="variablelist">
+                                       <dt id="launch.with.command.line.mode.console.translate">
+                                          <span class="term" id="launch.with.command.line.mode.console.translate.title">--mode=console-translate</span>
+                                       </dt>
+                                       <dd>
+                                          <p>In this mode, OmegaT attempts to translate the
+						  files in the source folder with the available
+						  translation memories.</p>
+                                          <p>This is useful if OmegaT is run on
+						  a server with TMX files automatically fed to a project.
+						  </p>
+                                          <div class="variablelist">
+                                             <dl class="variablelist">
+                                                <dt id="launch.with.command.line.source.pattern.lt.pattern.gt.">
+                                                   <span class="term" id="launch.with.command.line.source.pattern.lt.pattern.gt.title">--source-pattern=&lt;pattern&gt;</span>
+                                                </dt>
+                                                <dd>
+                                                   <p>A whitelist of regular expressions defining
+								the source files to process. Remember that in
+								regular expressions, the period and backslash
+								character must be escaped: &quot;\.&quot; and
+								&quot;\\&quot;.</p>
+                                                   <p>Here are some typical examples:
+								</p>
+                                                   <div class="variablelist">
+                                                      <dl class="variablelist">
+                                                         <dt id="launch.with.command.line.html">
+                                                            <span class="term" id="launch.with.command.line.html.title">.*\.html</span>
+                                                         </dt>
+                                                         <dd>
+                                                            <p>Translate all HTML files.</p>
+                                                         </dd>
+                                                         <dt id="launch.with.command.line.test.html">
+                                                            <span class="term" id="launch.with.command.line.test.html.title">test\.html</span>
+                                                         </dt>
+                                                         <dd>
+                                                            <p>Only translate
+									  <code class="filename">test.html</code> file in the
+									  source folder itself. Any files also named
+									  test.html in other subfolders will be
+									  ignored.</p>
+                                                         </dd>
+                                                         <dt id="launch.with.command.line.dir.test.html">
+                                                            <span class="term" id="launch.with.command.line.dir.test.html.title">dir-10\\test\.html</span>
+                                                         </dt>
+                                                         <dd>
+                                                            <p>Only translate the
+									  <code class="filename">test.html</code> file in the
+									  <code class="filename">dir-10</code>
+									  folder.</p>
+                                                         </dd>
+                                                      </dl>
+                                                   </div>
+                                                   <p>
+								See <a class="link" href="appendix.regexp.html" title="Appendix B. Regular expressions">Regular expressions</a> for details.
+								</p>
+                                                </dd>
+                                             </dl>
+                                          </div>
+                                          <p>
+						  
+                                          </p>
+                                       </dd>
+                                       <dt id="launch.with.command.line.mode.console.pseudotranslatetmx">
+                                          <span class="term" id="launch.with.command.line.mode.console.pseudotranslatetmx.title">--mode=console-pseudotranslatetmx</span>
+                                       </dt>
+                                       <dd>
+                                          <p>In this mode OmegaT will create a TMX for the
+						  whole project using only the source files.</p>
+                                          <p>Specify the
+						  TMX file to be created with:
+						  </p>
+                                          <div class="variablelist">
+                                             <dl class="variablelist">
+                                                <dt id="launch.with.command.line.pseudotranslatetmx.">
+                                                   <span class="term" id="launch.with.command.line.pseudotranslatetmx.title">--pseudotranslatetmx=<span class="emphasis">
+                                                         <em>&lt;path&gt;</em>
+                                                      </span>
+                                                   </span>
+                                                </dt>
+                                                <dd>
+                                                   <p>The output pseudotranslated TMX file.</p>
+                                                </dd>
+                                                <dt id="launch.with.command.line.pseudotranslatetype.equal.empty.">
+                                                   <span class="term" id="launch.with.command.line.pseudotranslatetype.equal.empty.title">--pseudotranslatetype=[equal|empty]</span>
+                                                </dt>
+                                                <dd>
+                                                   <p>What to fill the pseudotranslated TMX
+								with.</p>
+                                                </dd>
+                                             </dl>
+                                          </div>
+                                          <p>
+						  
+                                          </p>
+                                       </dd>
+                                       <dt id="launch.with.command.line.mode.console.align">
+                                          <span class="term" id="launch.with.command.line.mode.console.align.title">--mode=console-align
+						<span class="emphasis">
+                                                <em>--alignDir=<span class="emphasis">
+                                                      <em>&lt;path&gt;</em>
+                                                   </span>
+                                                </em>
+                                             </span>
+                                          </span>
+                                       </dt>
+                                       <dd>
+                                          <p>In this mode, OmegaT will align the files in the
+						  /source folder of the project with those at the location
+						  specified by the <span class="emphasis">
+                                                <em>--alignDir</em>
+                                             </span>
+						  parameter.</p>
+                                          <p>The resulting TMX file is is saved in the
+						  /omegat folder as align.tmx. The file types that can be
+						  aligned depend whether alignment is supported by the
+						  file filter . Supported filters include: ILIAS Language
+						  File, Java(TM) Resource Bundles, Key=Value Text, Magento
+						  CE Locale CSV, MoodlePHP, Mozilla DTD, Mozilla FTL, PO,
+						  RC, SubRip Subtitles, and Windows Resources.</p>
+                                          <p>The <span class="emphasis">
+                                                <em>--alignDir</em>
+                                             </span> parameter is
+						  used to specify the location of the data in the target
+						  language, which must be a folder containing the
+						  translated files.</p>
+                                          <p>That folder must contain a translation in the
+						  target language of the project. For instance, if the
+						  project is EN-to-FR, the folder must contain a bundle
+						  ending with _fr. The resulting TMX file is is saved in
+						  the /omegat folder as align.tmx.</p>
+                                       </dd>
+                                       <dt id="launch.with.command.line.mode.console.stats">
+                                          <span class="term" id="launch.with.command.line.mode.console.stats.title">--mode=console-stats <span class="emphasis">
+                                                <em>&lt;path&gt;</em>
+                                             </span>
+                                          </span>
+                                       </dt>
+                                       <dd>
+                                          <div class="variablelist">
+                                             <dl class="variablelist">
+                                                <dt id="launch.with.command.line.console.stats.output.file">
+                                                   <span class="term" id="launch.with.command.line.console.stats.output.file.title">--output-file=[stats-output-file]</span>
+                                                </dt>
+                                                <dd>
+                                                   <p>Prints to that file, or to standard output if absent. Without <span class="emphasis">
+                                                         <em>--stats-type</em>
+                                                      </span>, detects format from file extension. The output defaults to xml.</p>
+                                                </dd>
+                                                <dt id="launch.with.command.line.console.stats.output.format">
+                                                   <span class="term" id="launch.with.command.line.console.stats.output.format.title">--stats-type=[xml|text][txt][json]]]</span>
+                                                </dt>
+                                                <dd>
+                                                   <p>Requires <span class="emphasis">
+                                                         <em>--output-file</em>
+                                                      </span>. Specifies the output format.</p>
+                                                </dd>
+                                             </dl>
+                                          </div>
+                                          <p>The data is the same as when using <a class="link" href="menus.html#menus.tools.statistics">Statistics</a>.
+						</p>
+                                       </dd>
+                                    </dl>
+                                 </div>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                     <dt id="launch.with.command.line.non.gui.mode.options.">
+                        <span class="term" id="launch.with.command.line.non.gui.mode.options.title">Non-gui mode options:</span>
+                     </dt>
+                     <dd>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt id="launch.with.command.line.quiet">
+                                 <span class="term" id="launch.with.command.line.quiet.title">--quiet</span>
+                              </dt>
+                              <dd>
+                                 <p>Minimize the output shown on the command
+				  line.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.script.">
+                                 <span class="term" id="launch.with.command.line.script.title">--script=<span class="emphasis">
+                                       <em>
+                                          <span class="emphasis">
+                                             <em>&lt;path&gt;</em>
+                                          </span>
+                                       </em>
+                                    </span>
+                                 </span>
+                              </dt>
+                              <dd>
+                                 <p>A script file to run when a project event is
+					triggered.</p>
+                              </dd>
+                              <dt id="launch.with.command.line.tag.validation.abort.warn.">
+                                 <span class="term" id="launch.with.command.line.tag.validation.abort.warn.title">--tag-validation=[abort|warn]</span>
+                              </dt>
+                              <dd>
+                                 <p>Validate tags.
+					</p>
+                                 <div class="itemizedlist">
+                                    <ul class="itemizedlist" style="list-style-type: disc; ">
+                                       <li class="listitem">
+                                          <p>Abort: Exit with an error if there are invalid
+						tags.</p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p>Warn: Show warnings without exiting if there are
+						invalid tags.</p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <p>
+					
+                                 </p>
+                                 <div class="note">
+                                    <h3 class="title">Note</h3>
+                                    <p>Invalid tags reports are sent output to the terminal
+					  window.</p>
+                                 </div>
+                                 <p>
+					
+                                 </p>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                  </dl>
+               </div>
+               <p>
+	  
+               </p>
+            </section>
+         </section>
+      </section>
+      <footer>
+         <div class="navfooter">
+            <hr />
+            <table style="width: 100%; ">
+               <tr>
+                  <td style="width: 40%; text-align: left; ">
+                     <a accesskey="p" href="installing.omegat.html">Prev</a> </td>
+                  <td style="width: 20%; text-align: center; "> </td>
+                  <td style="width: 40%; text-align: right; "> <a accesskey="n" href="menus.html">Next</a>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="width: 40%; text-align: left; vertical-align: top; ">Install
+  OmegaT </td>
+                  <td style="width: 20%; text-align: center; ">
+                     <a accesskey="h" href="index_.html">Home</a>
+                  </td>
+                  <td style="width: 40%; text-align: right; vertical-align: top; "> Menus</td>
+               </tr>
+            </table>
+         </div>
+      </footer>
+   </div>
+    </div>
+
+    
+  </body></html>

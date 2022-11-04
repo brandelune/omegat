@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?><whc:toc xmlns:whc="http://www.xmlmind.com/whc/schema/whc" xmlns="http://www.w3.org/1999/xhtml" xmlns:htm="http://www.w3.org/1999/xhtml">
+               <whc:entry href="chapter.instant.start.guide.html"><whc:title>Introduction to OmegaT</whc:title>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.omegat."><whc:title>Principles</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.note.on.shortcuts"><whc:title>Shortcuts</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.create.and.open.new.project"><whc:title>Create a new project</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.manage.your.segments"><whc:title>Manage your segments</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.make.it.look.good"><whc:title>Make it look good!</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.translate.the.segments.one.by.one"><whc:title>Translate
+    your files</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.manage.your.tags"><whc:title>Manage your tags</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.review.the.translation"><whc:title>Review your translation</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.generate.the.translated.file"><whc:title>Create the translated files</whc:title></whc:entry>
+                     <whc:entry href="chapter.instant.start.guide.html#introduction.one.more.thing"><whc:title>Manage your projects</whc:title></whc:entry>
+                  </whc:entry>
+               <whc:entry href="how.to.html"><whc:title>How To...</whc:title>
+                     <whc:entry href="how.to.html#how.to.restore.your.data"><whc:title>Troubleshoot issues</whc:title>
+                           <whc:entry href="how.to.html#how.to.restore.your.data.automatic.backup"><whc:title>Automatic backups</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.restore.your.data.lost.in.translation"><whc:title>You lost your translation?</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.restore.your.data.project.wont.open"><whc:title>Your project won't open?</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.restore.your.data.translated.file.broken"><whc:title>Your translated file won't open?</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.restore.your.data.omegat.wont.behave"><whc:title>OmegaT won't behave?</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.restore.your.data.summary"><whc:title>Summary</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="how.to.html#how.to.translate.other.files"><whc:title>Support other formats</whc:title>
+                           <whc:entry href="how.to.html#d0e784"><whc:title>Association</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#d0e795"><whc:title>Conversion</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#d0e868"><whc:title>Third-party plugin</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#d0e903"><whc:title>Development</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="how.to.html#how.to.use.tm"><whc:title>Use translation memories</whc:title>
+                           <whc:entry href="how.to.html#how.to.use.tm.create.your.tm"><whc:title>Create your own TMs</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.use.tm.reuse.tm"><whc:title>Reuse TMs</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.tm.share.translation.memories"><whc:title>Share TMs</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.tm.bridge.two.languages"><whc:title>Bridge two
+  languages</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="how.to.html#how.to.manage.right.to.left"><whc:title>Manage RTL Languages</whc:title>
+                           <whc:entry href="how.to.html#how.to.manage.right.to.left.mixing.rtl.and.ltr"><whc:title>Mixing RTL and LTR</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.manage.right.to.left.omegat.tags.and.rtl"><whc:title>Tags in RTL Segments</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.manage.right.to.left.creating.translated.rtl.documents"><whc:title>Translated Documents</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="how.to.html#installing.omegat"><whc:title>Install
+  OmegaT</whc:title>
+                           <whc:entry href="how.to.html#installing.omegat.windows"><whc:title>On Windows</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#installing.omegat.linux.intel"><whc:title>On Linux</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#Installing.omegat.macos"><whc:title>On macOS</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#installing.omegat.other.systems"><whc:title>On other platforms</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#update.and.delete.omegat"><whc:title>Upgrade</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#update.and.delete.omegat.delete"><whc:title>Delete OmegaT</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#build.omegat.from.source"><whc:title>Build OmegaT</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="how.to.html#running.omegat"><whc:title>Run
+  OmegaT</whc:title>
+                           <whc:entry href="how.to.html#running.omegat.on.windows"><whc:title>On Windows</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#running.omegat.on.linux"><whc:title>On Linux</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#running.omegat.on.macos"><whc:title>On macOS</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#running.omegat.on.other.systems"><whc:title>On other platforms</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#launch.with.command.line"><whc:title>Command line launch</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="how.to.html#how.to.setup.team.project"><whc:title>Set up a team
+  project</whc:title>
+                           <whc:entry href="how.to.html#how.to.setup.team.project.prepare.the.repository"><whc:title>Preparations</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.setup.team.project.mapping.parameters"><whc:title>Repository mappings</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.setup.team.project.example.mappings"><whc:title>Example
+	mappings</whc:title></whc:entry>
+                           <whc:entry href="how.to.html#how.to.setup.team.project.selective.sharing"><whc:title>Selective sharing</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="how.to.html#how.to.use.team.project"><whc:title>Use a Team Project</whc:title></whc:entry>
+                  </whc:entry>
+               <whc:entry href="panes.html"><whc:title>Panes</whc:title>
+                     <whc:entry href="panes.html#panes.principles"><whc:title>Principles</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.editor"><whc:title>Editor</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.fuzzy.matches"><whc:title>Fuzzy Matches</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.glossary"><whc:title>Glossary</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.dictionary"><whc:title>Dictionary</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.machinetranslation"><whc:title>Machine Translation</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.multipletranslations"><whc:title>Multiple Translations</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.notes"><whc:title>Notes</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.comments"><whc:title>Comments</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.segment.properties"><whc:title>Segment properties</whc:title></whc:entry>
+                     <whc:entry href="panes.html#panes.statusbar"><whc:title>Status bar</whc:title></whc:entry>
+                  </whc:entry>
+               <whc:entry href="menus.html"><whc:title>Menus</whc:title>
+                     <whc:entry href="menus.html#menus.project"><whc:title>Project</whc:title></whc:entry>
+                     <whc:entry href="menus.html#menus.edit"><whc:title>Edit</whc:title></whc:entry>
+                     <whc:entry href="menus.html#menus.goto"><whc:title>Go To</whc:title></whc:entry>
+                     <whc:entry href="menus.html#menus.view"><whc:title>View</whc:title></whc:entry>
+                     <whc:entry href="menus.html#menus.tools"><whc:title>Tools</whc:title></whc:entry>
+                     <whc:entry href="menus.html#menus.options"><whc:title>Options</whc:title></whc:entry>
+                     <whc:entry href="menus.html#menus.help"><whc:title>Help</whc:title></whc:entry>
+                  </whc:entry>
+               <whc:entry href="windows.and.dialogs.html"><whc:title>Windows and Dialogs</whc:title>
+                     <whc:entry href="windows.and.dialogs.html#dialogs.project.properties"><whc:title>Project Properties</whc:title>
+                           <whc:entry href="windows.and.dialogs.html#dialogs.project.properties.languages"><whc:title>Languages</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#dialogs.project.properties.options"><whc:title>Options</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#dialogs.project.properties.file.locations"><whc:title>File locations</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="windows.and.dialogs.html#windows.source.files.list"><whc:title>Source Files</whc:title></whc:entry>
+                     <whc:entry href="windows.and.dialogs.html#windows.text.search"><whc:title>Text Search</whc:title>
+                           <whc:entry href="windows.and.dialogs.html#windows.text.search.methods"><whc:title>Search type</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.text.search.options"><whc:title>Options</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.text.search.result.display"><whc:title>Results display</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.text.search.filter"><whc:title>Filter</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="windows.and.dialogs.html#windows.text.replace"><whc:title>Text Replace</whc:title>
+                           <whc:entry href="windows.and.dialogs.html#windows.text.replace.methods"><whc:title>Search type</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.text.replace.options"><whc:title>Options</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.text.replace.result.display"><whc:title>Results display</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="windows.and.dialogs.html#windows.aligner"><whc:title>Align Files</whc:title>
+                           <whc:entry href="windows.and.dialogs.html#windows.aligner.adjust"><whc:title>Settings</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.aligner.manual.corrections"><whc:title>Corrections</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="windows.and.dialogs.html#windows.scripts"><whc:title>Scripting</whc:title>
+                           <whc:entry href="windows.and.dialogs.html#windows.scripts.folder"><whc:title>The script folder</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.scripts.usage"><whc:title>Usage</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.scripts.distribution"><whc:title>Distributed scripts</whc:title></whc:entry>
+                           <whc:entry href="windows.and.dialogs.html#windows.scripts.languages"><whc:title>Languages</whc:title></whc:entry>
+                        </whc:entry>
+                  </whc:entry>
+               <whc:entry href="project.folder.html"><whc:title>Project Folder</whc:title>
+                     <whc:entry href="project.folder.html#project.folder.source"><whc:title>source</whc:title></whc:entry>
+                     <whc:entry href="project.folder.html#project.folder.target"><whc:title>target</whc:title></whc:entry>
+                     <whc:entry href="project.folder.html#project.folder.tm"><whc:title>tm</whc:title></whc:entry>
+                     <whc:entry href="project.folder.html#project.folder.exported.tm"><whc:title>exported tms folder</whc:title></whc:entry>
+                     <whc:entry href="project.folder.html#project.folder.dictionary"><whc:title>dictionary</whc:title></whc:entry>
+                     <whc:entry href="project.folder.html#project.folder.glossary"><whc:title>glossary</whc:title></whc:entry>
+                     <whc:entry href="project.folder.html#project.folder.omegat.folder"><whc:title>omegat</whc:title></whc:entry>
+                     <whc:entry href="project.folder.html#project.folder.omegat.project"><whc:title>omegat.project</whc:title></whc:entry>
+                     <whc:entry href="project.folder.html#project.folder.repositories"><whc:title>.repositories</whc:title></whc:entry>
+                  </whc:entry>
+               <whc:entry href="dialogs.preferences.html"><whc:title>Preferences</whc:title>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.general"><whc:title>General</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.mt"><whc:title>Machine Translation</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.glossary"><whc:title>Glossary</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.dictionary"><whc:title>Dictionary</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.appearance"><whc:title>Appearance</whc:title>
+                           <whc:entry href="dialogs.preferences.html#dialogs.preferences.fonts"><whc:title>Font</whc:title></whc:entry>
+                           <whc:entry href="dialogs.preferences.html#dialogs.preferences.colours"><whc:title>Colors</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.file.filters"><whc:title>Global File Filters</whc:title>
+                           <whc:entry href="dialogs.preferences.html#dialogs.preferences.file.filters.general"><whc:title>Common preferences</whc:title></whc:entry>
+                           <whc:entry href="dialogs.preferences.html#edit.filter.dialog"><whc:title>Edit</whc:title></whc:entry>
+                           <whc:entry href="dialogs.preferences.html#filters.options"><whc:title>Options</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.segmentation.setup"><whc:title>Global Segmentation Rules</whc:title>
+                           <whc:entry href="dialogs.preferences.html#dialogs.preferences.segmentation.setup.scope"><whc:title>Language
+	sets</whc:title></whc:entry>
+                           <whc:entry href="dialogs.preferences.html#segmentation.rules"><whc:title>Set contents</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialog.preferences.auto.completion"><whc:title>Auto-Completion</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialog.preferences.spellchecker"><whc:title>Spellchecker</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialog.preferences.languagetool.plugin"><whc:title>LanguageTool</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.external.searches"><whc:title>Global External
+  Searches</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.editor"><whc:title>Editor</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.tag.processing"><whc:title>Tag Processing</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialog.preferences.team"><whc:title>Team</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialog.preferences.tm.matches"><whc:title>TM Matches</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialog.preferences.view"><whc:title>View</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.saving.and.output"><whc:title>Saving and
+  Output</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.proxy.login"><whc:title>Proxy Login</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.secure.store"><whc:title>Secure store</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.plugins"><whc:title>Plugins</whc:title></whc:entry>
+                     <whc:entry href="dialogs.preferences.html#dialogs.preferences.updates"><whc:title>Updates</whc:title></whc:entry>
+                  </whc:entry>
+               <whc:entry href="appendices.html"><whc:title>Appendices</whc:title>
+                     <whc:entry href="appendices.html#app.segmentation"><whc:title>Segmentation</whc:title>
+                           <whc:entry href="appendices.html#dialog.preferences.segmentation.setup.type"><whc:title>Paragraph or
+	sentence?</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#dialog.preferences.segmentation.setup.scope"><whc:title>Global or
+	local?</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#dialog.preferences.segmentation.setup.rules.based.segmentation"><whc:title>Rules</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="appendices.html#app.regex"><whc:title>Regular expressions</whc:title>
+                           <whc:entry href="appendices.html#app.regex.four.rules"><whc:title>The 4 rules</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#app.regex.twelve.characters"><whc:title>The 12 characters</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#app.regex.types.of.expressions"><whc:title>Lots of
+    expressions</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#app.regex.more.examples"><whc:title>More examples</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#app.regex.tools"><whc:title>References</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="appendices.html#app.glossaries"><whc:title>Glossaries</whc:title>
+                           <whc:entry href="appendices.html#glossaries.glossary.folder"><whc:title>The glossaries folder</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#glossaries.default.glossary"><whc:title>Project glossary</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#glossaries.fileformat"><whc:title>File format</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="appendices.html#app.shortcuts"><whc:title>OmegaT Shortcuts</whc:title>
+                           <whc:entry href="appendices.html#app.shortcuts.description"><whc:title>Description</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#app.shortcuts.streamline.workflow"><whc:title>A shortcut based workflow</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#app.shortcuts.customization"><whc:title>Customization</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#app.shortcuts.syntax"><whc:title>Syntax</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#app.shortcuts.lists"><whc:title>Lists of functions and codes</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="appendices.html#configuration.folder"><whc:title>Configuration Folder</whc:title>
+                           <whc:entry href="appendices.html#configuration.folder.location"><whc:title>Location</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#configuration.folder.default.contents"><whc:title>Default  contents</whc:title></whc:entry>
+                           <whc:entry href="appendices.html#configuration.folder.extra.contents"><whc:title>Additional contents</whc:title></whc:entry>
+                        </whc:entry>
+                     <whc:entry href="appendices.html#application.folder"><whc:title>Application Folder</whc:title></whc:entry>
+                  </whc:entry>
+            </whc:toc>

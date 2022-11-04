@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      <title>Configuration Folder</title>
+      <link href="OmegaT_webhelp.css" rel="stylesheet" type="text/css" />
+      <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator" />
+      <link href="project.folder.html" rel="prev" title="Project Folder" />
+      <link href="dialogs.preferences.html" rel="next" title="Preferences" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="_wh/jquery/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    <div id="wh-header">
+    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide DRAFT</a></div></div>
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <div id="wh-navigation-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search" role="button"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search" role="button"></span></span></div>
+        <div id="wh-toc-pane">
+        </div>
+        <div id="wh-search-pane">
+          <div id="wh-search-results">
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <header>
+         <div class="navheader">
+            <table style="width: 100%; ">
+               <tr>
+                  <th colspan="3" style="text-align: center; ">Configuration Folder</th>
+               </tr>
+               <tr>
+                  <td style="width: 20%; text-align: left; ">
+                     <a accesskey="p" href="project.folder.html">Prev</a> </td>
+                  <th style="width: 60%; text-align: center; "> </th>
+                  <td style="width: 20%; text-align: right; "> <a accesskey="n" href="dialogs.preferences.html">Next</a>
+                  </td>
+               </tr>
+            </table>
+            <hr />
+         </div>
+      </header>
+      <section class="chapter" id="configuration.folder">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h1 class="title">Configuration Folder</h1>
+               </div>
+            </div>
+         </div>
+         <div class="toc">
+            <ul class="toc">
+               <li>
+                  <span class="section">
+                     <a href="configuration.folder.html#configuration.folder.location">Location</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="section">
+                     <a href="configuration.folder.html#configuration.folder.default.contents">Default  contents</a>
+                  </span>
+               </li>
+               <li>
+                  <span class="section">
+                     <a href="configuration.folder.html#configuration.folder.extra.contents">Additional contents</a>
+                  </span>
+               </li>
+            </ul>
+         </div>
+         <p>The configuration folder stores the majority of the OmegaT parameters
+  and preferences for the user.</p>
+         <p>You can always access it directly from <a class="link" href="menus.html#menus.options.access.configuration.folder">Access
+      Configuration Folder</a> in the <a class="link" href="menus.html#menus.options" title="Options">Options</a> menu.</p>
+         <div class="note">
+            <h3 class="title">Note</h3>
+            <p>If anything happens to your OmegaT installation and you can't seem
+  to fix it, close OmegaT, make a backup of the contents of the configuration
+  folder, delete the original configuration folder, and restart OmegaT. You can
+  then copy your backed up configuration files to restore your original
+  preferences.</p>
+            <p>If you are recovering from a corrupt installation, you should copy the
+  backed up files one at a time to make it easier to isolate the problem if it
+  persists.</p>
+         </div>
+         <section class="section" id="configuration.folder.location">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">Location</h2>
+                  </div>
+               </div>
+            </div>
+            <p>The location of the configuration folder varies by system (the <span class="emphasis">
+                  <em>~</em>
+               </span> character represents your home directory):</p>
+            <div class="variablelist">
+               <dl class="variablelist">
+                  <dt>
+                     <span class="term">Linux</span>
+                  </dt>
+                  <dd>
+                     <p>
+                        <code class="filename">~/.omegat</code>
+                     </p>
+                  </dd>
+                  <dt>
+                     <span class="term">macOS</span>
+                  </dt>
+                  <dd>
+                     <p>
+                        <code class="filename">~/Library/Preferences/OmegaT</code>
+                     </p>
+                  </dd>
+                  <dt>
+                     <span class="term">Windows</span>
+                  </dt>
+                  <dd>
+                     <p>
+                        <code class="filename">~\AppData\Roaming\OmegaT</code>
+                     </p>
+                  </dd>
+               </dl>
+            </div>
+            <p>
+	
+            </p>
+         </section>
+         <section class="section" id="configuration.folder.default.contents">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">Default  contents</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="variablelist">
+               <dl class="variablelist">
+                  <dt id="configuration.folder.default.contents.omegat.prefs">
+                     <span class="term" id="configuration.folder.default.contents.omegat.prefs.title">omegat.prefs</span>
+                  </dt>
+                  <dd>
+                     <p>This file includes a number of important user
+		preferences.</p>
+                     <p>Some preference do not have an equivalent in the user interface. They must be modified manually.
+		</p>
+                     <div class="example" id="no.source.file.display">
+                        <div class="example-title">Example 16. Do not automatically display the Source Files list</div>
+                        <div class="example-contents">
+                           <p>To keep the Source Files list window to automatically open when a project is loaded,  find <span class="token">&lt;project_files_show_on_load&gt;</span> and replace <span class="token">true</span> to <span class="token">false</span>:</p>
+                           <pre class="programlisting">&lt;project_files_show_on_load&gt;<span class="token">false</span>&lt;/project_files_show_on_load&gt;</pre>
+                           <p>
+		  
+                           </p>
+                        </div>
+                     </div>
+                     <p>
+                        <br class="example-break" />
+                     </p>
+                     <div class="note">
+                        <h3 class="title">Note</h3>
+                        <p>Only this preference currently requires manual modification.</p>
+                     </div>
+                  </dd>
+                  <dt id="configuration.folder.default.contents.uilayout">
+                     <span class="term" id="configuration.folder.default.contents.uilayout.title">uiLayout.xml</span>
+                  </dt>
+                  <dd>
+                     <p>This file describes the overall OmegaT layout.</p>
+                  </dd>
+                  <dt id="configuration.folder.default.contents.logs">
+                     <span class="term" id="configuration.folder.default.contents.logs.title">logs/</span>
+                  </dt>
+                  <dd>
+                     <p>This folder contains a number of log files. The most current is <code class="filename">OmegaT.log</code>.</p>
+                     <p>These files record various internal state and program event messages generated while OmegaT is running. If OmegaT behaves erratically, it is important to include this file, or the relevant part thereof, if you submit a bug report.</p>
+                     <p>The contents of the file can also be viewed using the <a class="link" href="menus.html#menus.help.log">Log...</a> option in the <a class="link" href="menus.html#menus.help" title="Help">Help</a> menu.</p>
+                  </dd>
+                  <dt id="configuration.folder.default.contents.script">
+                     <span class="term" id="configuration.folder.default.contents.script.title">script/</span>
+                  </dt>
+                  <dd>
+                     <p>If the applicable functions are used, this folder can contain up to three text files:</p>
+                     <div class="variablelist">
+                        <dl class="variablelist">
+                           <dt id="configuration.folder.default.contents.script.selection">
+                              <span class="term" id="configuration.folder.default.contents.script.selection.title">selection.txt</span>
+                           </dt>
+                           <dd>
+                              <p>This file stores the currently selected text when the <a class="link" href="menus.html#menus.edit.export.selection">Export Selection		  <span class="keycap">
+                                       <strong>C</strong>
+                                    </span>+<span class="keycap">
+                                       <strong>C</strong>
+                                    </span>+<span class="keycap">
+                                       <strong>S</strong>
+                                    </span>
+	  
+                                 </a> command in the <a class="link" href="menus.html#menus.edit" title="Edit">Edit</a> menu is used. The text in the file is replaced each time this function is called.</p>
+                           </dd>
+                           <dt id="configuration.folder.default.contents.script.source">
+                              <span class="term" id="configuration.folder.default.contents.script.source.title">source.txt</span>
+                           </dt>
+                           <dd>
+                              <p>This file contains the <span class="emphasis">
+                                    <em>original text</em>
+                                 </span> from of the current segment when Preferences –  <a class="link" href="dialogs.preferences.html#dialogs.preferences.editor.export.the.segment.to.text.files">Export
+	  the segment to text files</a> is active. The text in the file is replaced each time a new segment is entered.</p>
+                           </dd>
+                           <dt id="configuration.folder.default.contents.script.target">
+                              <span class="term" id="configuration.folder.default.contents.script.target.title">target.txt</span>
+                           </dt>
+                           <dd>
+                              <p>This file contains the <span class="emphasis">
+                                    <em>translated text</em>
+                                 </span>  from the current segment when Preferences –  <a class="link" href="dialogs.preferences.html#dialogs.preferences.editor.export.the.segment.to.text.files">Export
+	  the segment to text files</a> is active. The text in the file is replaced each time a new segment is entered.</p>
+                           </dd>
+                        </dl>
+                     </div>
+                     <p>Those three files provide as a simple way to access some OmegaT content and process it with local programs such as shell scripts.</p>
+                  </dd>
+               </dl>
+            </div>
+         </section>
+         <section class="section" id="configuration.folder.extra.contents">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">Additional contents</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="variablelist">
+               <dl class="variablelist">
+                  <dt id="configuration.folder.extra.contents.editorshortcuts">
+                     <span class="term" id="configuration.folder.extra.contents.editorshortcuts.title">EditorShortcuts.properties</span>
+                  </dt>
+                  <dd>
+                     <p>This parameter file  contains customized editor shortcuts. See <a class="link" href="appendices.html#app.shortcuts.customization" title="Customization">Customization</a> for details.</p>
+                  </dd>
+                  <dt id="configuration.folder.extra.contents.maninmenushortcut">
+                     <span class="term" id="configuration.folder.extra.contents.maninmenushortcut.title">MainMenuShortcuts.properties</span>
+                  </dt>
+                  <dd>
+                     <p>This parameter file  contains customized user interface shortcuts. See <a class="link" href="appendices.html#app.shortcuts.customization" title="Customization">Customization</a> for details.</p>
+                  </dd>
+                  <dt id="configuration.folder.extra.contents.filters">
+                     <span class="term" id="configuration.folder.extra.contents.filters.title">filters.xml</span>
+                  </dt>
+                  <dd>
+                     <p>This parameter file contains customized file filters. See Preferences – <a class="link" href="dialogs.preferences.html#dialogs.preferences.file.filters" title="Global File Filters">Global File Filters</a> for details.</p>
+                  </dd>
+                  <dt id="configuration.folder.extra.contents.finder">
+                     <span class="term" id="configuration.folder.extra.contents.finder.title">finder.xml</span>
+                  </dt>
+                  <dd>
+                     <p>This parameter file contains customized external search parameters. See Preferences – <a class="link" href="dialogs.preferences.html#dialogs.preferences.external.searches" title="Global External Searches">Global External
+  Searches</a> for details.</p>
+                  </dd>
+                  <dt id="configuration.folder.extra.contents.omegat.autotext">
+                     <span class="term" id="configuration.folder.extra.contents.omegat.autotext.title">omegat.autotext</span>
+                  </dt>
+                  <dd>
+                     <p>This parameter file contains customized autotext parameters. See <a class="link" href="dialogs.preferences.html#dialog.preferences.auto.completion" title="Auto-Completion">Auto-Completion</a> for details.</p>
+                  </dd>
+                  <dt id="configuration.folder.extra.contents.repositories">
+                     <span class="term" id="configuration.folder.extra.contents.repositories.title">repositories.properties</span>
+                  </dt>
+                  <dd>
+                     <p>This file contains the login information for your team project repositories.</p>
+                     <div class="warning">
+                        <h3 class="title">Warning</h3>
+                        <p>The file contents are not encrypted.</p>
+                     </div>
+                     <p>See <a class="link" href="how.to.html#how.to.setup.team.project" title="Set up a team project">Set up a team
+  project</a> for details.</p>
+                  </dd>
+                  <dt id="configuration.folder.extra.contents.segmentation">
+                     <span class="term" id="configuration.folder.extra.contents.segmentation.title">segmentation.conf</span>
+                  </dt>
+                  <dd>
+                     <p>This parameter file contains customized segmentation parameters. See Preferences –  <a class="link" href="dialogs.preferences.html#dialogs.preferences.segmentation.setup" title="Global Segmentation Rules">Global Segmentation Rules</a> for details.</p>
+                  </dd>
+                  <dt id="configuration.folder.extra.contents.plugin">
+                     <span class="term" id="configuration.folder.extra.contents.plugin.title">plugins/</span>
+                  </dt>
+                  <dd>
+                     <p>This folder provides an alternative location for manually installed OmegaT extension plugins. See Preferences – <a class="link" href="dialogs.preferences.html#dialogs.preferences.plugins" title="Plugins">Plugins</a> for details.</p>
+                  </dd>
+                  <dt id="configuration.folder.extra.contents.spelling">
+                     <span class="term" id="configuration.folder.extra.contents.spelling.title">spelling/</span>
+                  </dt>
+                  <dd>
+                     <p>This folder contains your spelling dictionaries. See <a class="link" href="dialogs.preferences.html#dialog.preferences.spellchecker.install.new">Install new dictionary...</a> for details.</p>
+                  </dd>
+               </dl>
+            </div>
+         </section>
+         <div class="note">
+            <h3 class="title">Note</h3>
+            <p>You can specify a configuration folder other than the default when you
+	start OmegaT from the command line. See <a class="link" href="how.to.html#launch.with.command.line" title="Command line launch">Command line launch</a> for details.</p>
+            <p>Preferences are stored in the default configuration folder. If
+	you specify a different configuration folder, all modifications made in the <a class="link" href="dialogs.preferences.html" title="Preferences">Preferences</a> dialog will be stored in the newly specified configuration folder.</p>
+         </div>
+      </section>
+      <footer>
+         <div class="navfooter">
+            <hr />
+            <table style="width: 100%; ">
+               <tr>
+                  <td style="width: 40%; text-align: left; ">
+                     <a accesskey="p" href="project.folder.html">Prev</a> </td>
+                  <td style="width: 20%; text-align: center; "> </td>
+                  <td style="width: 40%; text-align: right; "> <a accesskey="n" href="dialogs.preferences.html">Next</a>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="width: 40%; text-align: left; vertical-align: top; ">Project Folder </td>
+                  <td style="width: 20%; text-align: center; ">
+                     <a accesskey="h" href="index_.html">Home</a>
+                  </td>
+                  <td style="width: 40%; text-align: right; vertical-align: top; "> Preferences</td>
+               </tr>
+            </table>
+         </div>
+      </footer>
+   </div>
+    </div>
+
+    
+  </body></html>
