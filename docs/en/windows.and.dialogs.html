@@ -10,7 +10,7 @@
    
 <body>
     <div id="wh-header">
-    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide DRAFT</a></div></div>
+    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide</a></div></div>
 
     <div id="wh-body">
       <div class="wh-icon-menu" id="wh-menu"></div>
@@ -331,30 +331,73 @@
                         </div>
                      </dd>
                      <dt id="dialogs.project.properties.external.processing.command">
-                        <span class="term" id="dialogs.project.properties.external.processing.command.title">External
-        Post-processing Command</span>
+                        <span class="term" id="dialogs.project.properties.external.processing.command.title">Local
+        Post-processing Commands</span>
                      </dt>
                      <dd>
-                        <p>This area displays the external post-processing
-          command (a script to rename files, for instance) that will be applied
-          each time <a class="link" href="menus.html#menus.project.create.translated.documents">Create Translated Files <span class="keycap">
+                        <div class="warning">
+                           <h3 class="title">Warning</h3>
+                           <p>For security reasons, local post-processing commands are
+		  disabled by default. See <a class="link" href="dialogs.preferences.html#dialogs.preferences.saving.and.output.also.allow.per.project.external.commands">Allow local post-processing commands</a>
+		  for details.</p>
+                        </div>
+                        <p>Specify the commands that will automatically be run after using <a class="link" href="menus.html#menus.project.create.translated.documents">Create Translated Files <span class="keycap">
                                  <strong>C</strong>
                               </span>+<span class="keycap">
                                  <strong>D</strong>
                               </span>
 
-                           </a> is
-          used.</p>
-                        <p>By default, post-processing commands are global and are
-		  available to all projects. They are defined in <a class="link" href="dialogs.preferences.html#dialogs.preferences.saving.and.output.external.post-processing.command">External
-	  Post-processing Command</a>.</p>
+                           </a> or <a class="link" href="menus.html#menus.project.create.current.translated.document">Create Current Translated File		  <span class="keycap">
+                                 <strong>C</strong>
+                              </span>+<span class="keycap">
+                                 <strong>S</strong>
+                              </span>+<span class="keycap">
+                                 <strong>D</strong>
+                              </span>
+
+                           </a>.</p>
+                        <p>The commands
+		specified here are only available to this project. They are saved in <a class="link" href="project.folder.html#project.folder.omegat.project.file">omegat.project</a>. Only enable local post-processing commands if you trust the source of that file.</p>
+                        <p>The template variables list gives you access to various project
+		data and system variables:
+		</p>
+                        <div class="example" id="dialogs.preferences.saving.and.output.external.post-processing.command.example">
+                           <div class="example-title">Example 15. Simple examples of post-processing commands:</div>
+                           <div class="example-contents">
+                              <div class="variablelist">
+                                 <dl class="variablelist">
+                                    <dt>
+                                       <span class="term">Open the target folder in Linux</span>
+                                    </dt>
+                                    <dd>
+                                       <pre class="programlisting">xdg-open ${targetRoot}</pre>
+                                    </dd>
+                                    <dt>
+                                       <span class="term">Open the target folder in macOS</span>
+                                    </dt>
+                                    <dd>
+                                       <pre class="programlisting">open ${targetRoot}</pre>
+                                    </dd>
+                                    <dt>
+                                       <span class="term">Open the target folder in Windows Powershell</span>
+                                    </dt>
+                                    <dd>
+                                       <pre class="programlisting">Invoke-Item ${targetRoot}</pre>
+                                    </dd>
+                                 </dl>
+                              </div>
+                           </div>
+                        </div>
+                        <p>
+                           <br class="example-break" />
+		
+                        </p>
+                        <p>You can also define global post-processing commands
+		  available to all projects that share the same configuration folder. Such commands are defined in <a class="link" href="dialogs.preferences.html#dialogs.preferences.saving.and.output.external.post-processing.command">Global
+	  Post-processing Commands</a>.</p>
                         <div class="note">
                            <h3 class="title">Note</h3>
-                           <p>For security purposes, project-based local external commands are
-		  disabled by default. You can enable them by checking <a class="link" href="dialogs.preferences.html#dialogs.preferences.saving.and.output.also.allow.per.project.external.commands">Allow local post-processing commands</a>
-		  in the <a class="link" href="dialogs.preferences.html#dialogs.preferences.saving.and.output" title="Saving and Output">Saving and
-  Output</a>
-		  preferences.</p>
+                           <p>Local commands are run before global commands.</p>
                         </div>
                      </dd>
                      <dt id="dialogs.project.properties.filters">
@@ -363,7 +406,7 @@
                      </dt>
                      <dd>
                         <p>By default, file filter settings are global and are shared by
-          all projects. They are found in <a class="link" href="dialogs.preferences.html#dialogs.preferences.file.filters.title">Global File Filters</a>.</p>
+          all projects. They are found in <a class="link" href="dialogs.preferences.html#dialogs.preferences.file.filters" title="Global File Filters">Global File Filters</a>.</p>
                         <p>Use this button to create local file filters specific to your
 		  project. Check the <span class="guilabel">Use local file filters
 		  settings</span> box, and adjust the settings as desired.</p>
@@ -373,7 +416,7 @@
                            <p>To disable project specific file filters, uncheck the
 		  box or remove that file.</p>
                         </div>
-                        <p>See <a class="link" href="dialogs.preferences.html#dialogs.preferences.file.filters" title="Global File Filters">Global File Filters</a> for details.</p>
+                        <p>See <a class="link" href="appendices.html#file.filters" title="File Filters">File Filters</a> for details.</p>
                      </dd>
                      <dt id="dialogs.project.properties.repository.mapping">
                         <span class="term" id="dialogs.project.properties.repository.mapping.title">Repository
@@ -387,7 +430,7 @@
                      </dd>
                      <dt id="dialogs.project.properties.external.searches">
                         <span class="term" id="dialogs.project.properties.external.searches.title">Local External
-        Searches...</span>
+        Searches</span>
                      </dt>
                      <dd>
                         <p>By default, external searches are global and are shared by all
@@ -805,7 +848,7 @@
   the search field is selected to start the search.</p>
             <p>Matches will be displayed in bold blue characters.</p>
             <div class="example" id="search.for.doitsu">
-               <div class="example-title">Example 13. Search for ドイツ</div>
+               <div class="example-title">Example 16. Search for ドイツ</div>
                <div class="example-contents">
                   <p>
 		  
@@ -1105,7 +1148,7 @@ above only apply to exact and keyword searches.</p>
                      </dt>
                      <dd>
                         <p>Search in reference files not included in the project ressources.</p>
-                        <p>OmegaT can conduct searches in any file that it can read as source file. See <a class="link" href="dialogs.preferences.html#dialogs.preferences.file.filters" title="Global File Filters">Global File Filters</a> for details.</p>
+                        <p>OmegaT can conduct searches in any file that it can read as source file. See <a class="link" href="appendices.html#file.filters" title="File Filters">File Filters</a> for details.</p>
                         <p>TMX files are excluded from file searches since OmegaT
 	does not recognize them as a source file format despite supporting them as
 	translation memories.</p>
@@ -1205,7 +1248,7 @@ above only apply to exact and keyword searches.</p>
 
   	</p>
                <div class="example" id="select.second.match">
-                  <div class="example-title">Example 14. Select the second match</div>
+                  <div class="example-title">Example 17. Select the second match</div>
                   <div class="example-contents">
                      <p>
 		  
@@ -1288,7 +1331,7 @@ above only apply to exact and keyword searches.</p>
   still in the field.</p>
             <p>Search matches are displayed in bold blue characters, and the modified strings are displayed in orange to show the result of the replacement.</p>
             <div class="example" id="replace.with.allemand">
-               <div class="example-title">Example 15. Replace a term</div>
+               <div class="example-title">Example 18. Replace a term</div>
                <div class="example-contents">
                   <p>
 	  

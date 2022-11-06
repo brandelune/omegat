@@ -427,7 +427,7 @@
 						<programlisting>user.language=fr
 config-dir="path/to/new/configdir"</programlisting>
 						Almost all parameters presented in this function can be used in a
-						config file. The notable exception of <code>remote-project</code>.
+						config file. The notable exception is <code>remote-project</code>.
 					</para>
 					<warning>
 						<para>It is possible to combine <code>--config-file</code> with

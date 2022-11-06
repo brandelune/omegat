@@ -3,18 +3,18 @@
    <head><meta charset="UTF-8" />
       <title>Appendices</title>
       <link href="OmegaT_webhelp.css" rel="stylesheet" type="text/css" />
-      <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator" />
+      <meta content="DocBook XSL Stylesheets V1.79.1" name="generator" />
       <link href="dialogs.preferences.html" rel="prev" title="Preferences" />
    <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="_wh/jquery/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
    
 <body>
     <div id="wh-header">
-    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide DRAFT</a></div></div>
+    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide</a></div></div>
 
     <div id="wh-body">
       <div class="wh-icon-menu" id="wh-menu"></div>
       <div id="wh-navigation">
-        <div id="wh-navigation-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search" role="button"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search" role="button"></span></span></div>
+        <div id="wh-navigation-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span></div>
         <div id="wh-toc-pane">
         </div>
         <div id="wh-search-pane">
@@ -51,6 +51,28 @@
          </div>
          <div class="toc">
             <ul class="toc">
+               <li>
+                  <span class="section">
+                     <a href="appendices.html#file.filters">File Filters</a>
+                  </span>
+                  <ul>
+                     <li>
+                        <span class="section">
+                           <a href="appendices.html#file.filters.general">Common preferences</a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="section">
+                           <a href="appendices.html#edit.filter.dialog">Edit</a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="section">
+                           <a href="appendices.html#filters.options">Options</a>
+                        </span>
+                     </li>
+                  </ul>
+               </li>
                <li>
                   <span class="section">
                      <a href="appendices.html#app.segmentation">Segmentation</a>
@@ -191,6 +213,929 @@
                </li>
             </ul>
          </div>
+         <section class="section" id="file.filters">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both">File Filters</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="warning">
+               <h3 class="title">Warning</h3>
+               <p>File filters are either local and specific to a given project, or global and available to all the projects that share a configuration folder.</p>
+               <p>See:
+  </p>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">
+                        <p>
+                           <a class="link" href="windows.and.dialogs.html#dialogs.project.properties.filters">Local File
+        Filters...</a>
+                        </p>
+                     </li>
+                     <li class="listitem">
+                        <p>
+                           <a class="link" href="dialogs.preferences.html#dialogs.preferences.file.filters" title="Global File Filters">Global File Filters</a>
+                        </p>
+                     </li>
+                     <li class="listitem">
+                        <p>
+                           <a class="link" href="appendices.html#configuration.folder" title="Configuration Folder">Configuration Folder</a>
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <p>
+  for details.</p>
+            </div>
+            <p>Filters in bold are used in the current project.</p>
+            <p>Disable a filter by unchecking its box if you prefer not to translate
+	the files that are associated to it. Their contents will not be displayed
+	for translation.</p>
+            <p>To modify the file extensions, target file name 
+	and encodings associated to a filter, select  it in the list and
+	click the <span class="guibutton">Edit...</span> button.</p>
+            <p>Some filters provide a <span class="guibutton">Options...</span> button to
+	further customize their settings.</p>
+            <p>Click the <span class="guibutton">Restore Defaults</span> button to
+	reset the file filters to their default settings.</p>
+            <p>Modified global file filter preferences are saved in <a class="link" href="appendices.html#configuration.folder.extra.contents.filters">filters.xml</a>, in the
+	configuration folder. See <a class="link" href="appendices.html#configuration.folder" title="Configuration Folder">Configuration Folder</a> for details. Deleting that file also
+	resets the filter preferences.</p>
+            <p>Modified local file filters are saved in <a class="link" href="appendices.html#configuration.folder.extra.contents.filters">filters.xml</a>, in the
+	project folder. See <a class="link" href="project.folder.html" title="Project Folder">Project Folder</a> for details. Deleting that file also resets
+	the filter preferences and reverts the project to global file
+	filters.</p>
+            <section class="section" id="file.filters.general">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title">Common preferences</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="variablelist">
+                  <dl class="variablelist">
+                     <dt>
+                        <span class="term">Remove leading and trailing tags</span>
+                     </dt>
+                     <dd>
+                        <p>Leading and trailing tags are generally required by OmegaT to
+			properly recreate the translated segment. Removing them from the
+			translatable contents ensures that you will not erase or modify them
+			by mistake.</p>
+                        <p>If you keep the leading and trailing tags, make sure that
+			they are leading and trailing as well in the translation.</p>
+                     </dd>
+                     <dt>
+                        <span class="term">Remove leading and trailing whitespace in non-segmented
+		  projects</span>
+                     </dt>
+                     <dd>
+                        <p> By default, OmegaT removes any leading and trailing
+			whitespace from the translatable contents. In non-segmented
+			projects, disable this option to make leading and trailing
+			whitespace modifiable in the translation.</p>
+                     </dd>
+                     <dt>
+                        <span class="term">Preserve spaces for all tags</span>
+                     </dt>
+                     <dd>
+                        <p>If the source documents contain whitespace used to control the
+			layout, the whitespace that must be will retained in the
+			translated document.</p>
+                     </dd>
+                     <dt>
+                        <span class="term">Do not use the file name to identify alternate translations</span>
+                     </dt>
+                     <dd>
+                        <p>The source file name is one of the elements that characterize
+			an alternative translation. If this option is checked, only the
+			previous/next segments or a segment identifier will be used to
+			characterize an alternative translation.</p>
+                        <p>Segments with the same characteristics located in other files
+			will be translated the same way.</p>
+                     </dd>
+                  </dl>
+               </div>
+            </section>
+            <section class="section" id="edit.filter.dialog">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title">Edit</h3>
+                     </div>
+                  </div>
+               </div>
+               <p>Double-click the editable fields to make simple modifications or
+      click on the <span class="guibutton">Edit...</span> button to access the
+      modification dialog.</p>
+               <p>To add a filter pattern, click on <span class="guibutton">Add...</span> to
+	  open a similar dialog.</p>
+               <p>Both dialogs allow you to customize the filename patterns for the
+	  source and target files associated to this the filter, and select their
+	  respective encoding.</p>
+               <p>Use the <span class="guilabel">Filename Variables</span> drop-down menu to
+	  customize the target file name.</p>
+               <section class="section" id="source.filetype.and.filename.pattern">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h4 class="title">Source filename
+		pattern</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <p> To associate a filter to a file, OmegaT checks its file  extension and attempts
+		to match it to a source filename patterns in a filter.</p>
+                  <p>For example, the pattern <code class="literal">.xhtml</code> registered in
+		the XHTML filter matches any file with the <code class="filename">xhtml</code>
+		extension. If such a file is found in the <a class="link" href="project.folder.html#project.folder.source" title="source">source</a> folder, the file will be handled by the
+		XHTML filter.</p>
+                  <p>You can change or add filename patterns to associate different
+		files to a filter.</p>
+                  <div class="warning">
+                     <h3 class="title">Warning</h3>
+                     <p>Associating a file extension to a filter is not
+		sufficient to have the filter properly handle the file. The file
+		structure must also be compatible with the filter: even if you associate
+		<code class="literal">.odt</code> to the XHMTL filter, the filter will not be able
+		to understand the contents of a LibreOffice Writer
+		file.</p>
+                  </div>
+                  <p>Source filename patterns use wild card characters : the
+		<code class="literal">*</code> character matches zero or more characters, while
+		the <code class="literal">?</code> character matches exactly one character.</p>
+                  <p>For example, use the pattern
+		<code class="literal">read*</code> if you want to have
+		the text filter handle readme files (<code class="literal">readme, read.me</code>,
+		or <code class="literal">readme.txt</code>).</p>
+               </section>
+               <section class="section" id="source.and.target.files.encoding">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h4 class="title">Source and translated
+		file encoding</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <p>Most file formats allow various possible encodings. By default,
+		the encoding of the translated file is the same as that of the source
+		file.</p>
+                  <p>The source and target encoding fields use drop-down menus listing
+		all supported encodings. Selecting the <span class="guilabel">&lt;auto&gt;</span>
+		option leaves the choice of encoding to OmegaT, based on the following
+		criteria:</p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist" style="list-style-type: disc; ">
+                        <li class="listitem">
+                           <p>OmegaT uses the encoding declaration in the source file, if
+			present, to identify the encoding (HTML or XML based files).</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist" style="list-style-type: disc; ">
+                        <li class="listitem">
+                           <p>OmegaT is instructed to use a mandatory encoding for certain
+			file formats (Java properties, for example).</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist" style="list-style-type: disc; ">
+                        <li class="listitem">
+                           <p>OmegaT uses the default encoding of the operating system for
+			text files.</p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section class="section" id="target.name">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h4 class="title">Translated filename</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <p>Files in the <a class="link" href="project.folder.html#project.folder.target" title="target">target</a> folder are overwritten everytime
+		you create them if they are created with the same name.</p>
+                  <p>OmegaT can automatically create new file names for the files you
+		create, by adding a language code or a time stamp, for example.</p>
+                  <p>The target
+		filename pattern uses a special syntax. The easiest way to modify it is to  use the
+		<span class="guilabel">Edit Pattern</span> dialog. The  dialog
+		offers various options:</p>
+                  <div class="variablelist">
+                     <dl class="variablelist">
+                        <dt>
+                           <span class="term">${filename}</span>
+                        </dt>
+                        <dd>
+                           <p>The default pattern. It
+			represents the complete filename of the source file, including the
+			extension. Using this pattern assigns the translated file the exact
+			same name as the source file.</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${nameOnly}</span>
+                        </dt>
+                        <dd>
+                           <p>name of the source file,
+			without the extension</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${extension} </span>
+                        </dt>
+                        <dd>
+                           <p>original file
+			extension</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${targetLocale}</span>
+                        </dt>
+                        <dd>
+                           <p>target language+region
+			code (xx_YY)</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${targetLanguage}</span>
+                        </dt>
+                        <dd>
+                           <p>target
+			language+region (xx-YY)</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${targetLanguageCode}</span>
+                        </dt>
+                        <dd>
+                           <p>
+			target language code (xx)</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${targetCountryCode}</span>
+                        </dt>
+                        <dd>
+                           <p> 
+			target region code (YY)</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${timestamp-????}</span>
+                        </dt>
+                        <dd>
+                           <p>system time when the file is was created</p>
+                           <p>See the <a class="ulink" href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html" target="_top"> Oracle documentation</a> for
+		examples.</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${system-os-name}</span>
+                        </dt>
+                        <dd>
+                           <p>name of
+			the operating system</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${system-user-name}</span>
+                        </dt>
+                        <dd>
+                           <p>user’s
+			login name</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${system-host-name}</span>
+                        </dt>
+                        <dd>
+                           <p>host name on the
+			system</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${file-source-encoding}</span>
+                        </dt>
+                        <dd>
+                           <p>
+          encoding of the source file</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${file-target-encoding}</span>
+                        </dt>
+                        <dd>
+                           <p>encoding of the target file</p>
+                        </dd>
+                        <dt>
+                           <span class="term">${targetLocaleLCID}</span>
+                        </dt>
+                        <dd>
+                           <p>Microsoft target locale</p>
+                        </dd>
+                     </dl>
+                  </div>
+                  <p>Additional variants are available for
+		<code class="literal">${nameOnly}</code> and <code class="literal">${Extension}</code>.</p>
+                  <p>If the file name is ambiguous, variables of the form
+		<code class="literal">${nameonly</code>
+                     <span class="emphasis">
+                        <em>-extension number</em>
+                     </span>}
+		and <code class="literal">${extension</code>-<span class="emphasis">
+                        <em>extension number}
+		</em>
+                     </span> can be used.</p>
+                  <div class="example" id="target.name.example">
+                     <div class="example-title">Example 26. Target file names</div>
+                     <div class="example-contents">
+                        <p>For a source file named Document.xx.docx, using
+		the variable variants below will produce the following results:</p>
+                        <div class="itemizedlist">
+                           <ul class="itemizedlist" style="list-style-type: disc; ">
+                              <li class="listitem">
+                                 <p>
+                                    <code class="literal">${nameOnly-0}</code>:
+			<code class="filename">Document</code>
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p>
+                                    <code class="literal">${nameOnly-1}</code>:
+			<code class="filename">Document.xx</code>
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p>
+                                    <code class="literal">${nameOnly-2}</code>:
+			<code class="filename">Document.xx.docx</code>
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p>
+                                    <code class="literal">${extension-0}</code>:
+			<code class="filename">docx</code>
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p>
+                                    <code class="literal">${extension-1}</code>:
+			<code class="filename">xx.docx</code>
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p>
+                                    <code class="literal">${extension-2}</code>:
+			<code class="filename">Document.xx.docx</code>
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <br class="example-break" />
+               </section>
+            </section>
+            <section class="section" id="filters.options">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title">Options</h3>
+                     </div>
+                  </div>
+               </div>
+               <p>Several filters offer options. Select the filter in the list and
+      click <span class="guibutton">Options...</span> to modify them. </p>
+               <p>The available options are:</p>
+               <div class="variablelist">
+                  <dl class="variablelist">
+                     <dt id="file.filters.xliff">
+                        <span class="term" id="file.filters.xliff.title">Monolingual XLIFF</span>
+                     </dt>
+                     <dd>
+                        <p>
+			  
+                        </p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Compatibility with OmegaT 2.6</span>
+                              </dt>
+                              <dd>
+                                 <p>Enable this option if you need to work with XLIFF
+					files created with OmegaT 2.6.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Identifier used for alternative
+				  translations</span>
+                              </dt>
+                              <dd>
+                                 <p>User can select from three options,
+					Previous and next paragraphs, &lt;trans unit&gt;
+					ID, or, &lt;trans-unit&gt; resname attribute
+					when available, when unavailable, the ID will be
+					used as a fallback.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Tag shortcuts</span>
+                              </dt>
+                              <dd>
+                                 <p>These option specify the way OmegaT creates tags from
+					the XLIFF contents.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Target segment status</span>
+                              </dt>
+                              <dd>
+                                 <p>if checked, OmegaT changes the state of the XLIFF
+					target part to &quot;needs-review-translation&quot; instead of
+					&quot;translated&quot;</p>
+                              </dd>
+                           </dl>
+                        </div>
+                        <p>
+			
+                        </p>
+                     </dd>
+                     <dt id="file.filters.text">
+                        <span class="term" id="file.filters.text.title">Text files</span>
+                     </dt>
+                     <dd>
+                        <p>
+			  
+                        </p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Create paragraphs on:</span>
+                              </dt>
+                              <dd>
+                                 <p>Text files do not have generic paragraph markers. Choose here the way OmegaT creates paragraphs in your
+					text files.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Line length in target files (0
+				  = no limit)</span>
+                              </dt>
+                              <dd>
+                                 <p>
+					  
+                                 </p>
+                                 <div class="variablelist">
+                                    <dl class="variablelist">
+                                       <dt>
+                                          <span class="term">Line length</span>
+                                       </dt>
+                                       <dd>
+                                          <p>specifies the maximum number of characters before breaking a long line. A value of 0 sets no limits.</p>
+                                       </dd>
+                                       <dt>
+                                          <span class="term">Maximum line length</span>
+                                       </dt>
+                                       <dd>
+                                          <p>specifies the maximum number of characters before cutting a line and ignoring the rest. A value of 0 sets no limits.</p>
+                                       </dd>
+                                    </dl>
+                                 </div>
+                                 <p>
+					
+                                 </p>
+                              </dd>
+                           </dl>
+                        </div>
+                        <p>
+			
+                        </p>
+                     </dd>
+                     <dt id="file.filter.microsoft">
+                        <span class="term" id="file.filter.microsoft.title">Microsoft Office Open XML files</span>
+                     </dt>
+                     <dd>
+                        <p>You can choose additional document elements to
+			translate. They will appear as separate segments in the
+			editor.</p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Word</span>
+                              </dt>
+                              <dd>
+                                 <p>Non-visible instruction text, comments, footnotes,
+				  endnotes, footers, duplicate fallback text, and document
+				  properties.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Excel</span>
+                              </dt>
+                              <dd>
+                                 <p>Comments and sheet names.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Power Point</span>
+                              </dt>
+                              <dd>
+                                 <p>Slide comments, slide masters, and slide
+				  layouts.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Global</span>
+                              </dt>
+                              <dd>
+                                 <p>External links, charts, diagrams, drawings, and
+				  WordArt.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Other Options:</span>
+                              </dt>
+                              <dd>
+                                 <p>
+				  
+                                 </p>
+                                 <div class="variablelist">
+                                    <dl class="variablelist">
+                                       <dt>
+                                          <span class="term">Aggregate tags</span>
+                                       </dt>
+                                       <dd>
+                                          <p>Tags that do not enclose
+						translatable text will be aggregated into a single
+						tag.</p>
+                                       </dd>
+                                       <dt>
+                                          <span class="term">Preserve spaces for all tags</span>
+                                       </dt>
+                                       <dd>
+                                          <p>Whitespace (i.e., spaces and
+						newlines) will be preserved, even if this option
+						is not defined in the document.</p>
+                                       </dd>
+                                       <dt>
+                                          <span class="term">Start a new paragraph on Word soft-returns</span>
+                                       </dt>
+                                       <dd>
+                                          <p>Enable this option if soft-returns are intended to be
+						paragraph starters.</p>
+                                       </dd>
+                                    </dl>
+                                 </div>
+                                 <p>
+				
+                                 </p>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                     <dt id="file.filters.xhtml">
+                        <span class="term" id="file.filters.xhtml.title">XHTML Files</span>
+                     </dt>
+                     <dd>
+                        <p>
+			
+                        </p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Translate the following attributes</span>
+                              </dt>
+                              <dd>
+                                 <p>The selected attributes will appear as translatable segments in the
+				  <span class="guilabel">Editor</span> pane.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Start a new paragraph on</span>
+                              </dt>
+                              <dd>
+                                 <p>The &lt;br&gt; HTML tag will constitute a paragraph
+				  break for segmentation purposes.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Ignored paragraphs at loading (regular expression)</span>
+                              </dt>
+                              <dd>
+                                 <p>At loading, any paragraph
+				  matching the regular expression will be ignored and
+				  will not be displayed for translation.</p>
+                                 <p>This option is convenient when dealing with HTML
+				  parts that only contain non translatable text.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Ignored &lt;meta&gt; tags &quot;content&quot; attribute</span>
+                              </dt>
+                              <dd>
+                                 <p>Define the &lt;meta&gt; tag attribute values for which
+				  the associated &quot;content&quot; attribute will not be
+				  translated.</p>
+                                 <p>Do not add quotation marks and separate the
+				  values with a comma.
+				  </p>
+                                 <div class="example" id="file.filters.xhtml.example">
+                                    <div class="example-title">Example 27. Ignore the content part of &lt;meta name=&quot;robots&quot;
+					content=&quot;index, follow&quot;&gt;</div>
+                                    <div class="example-contents">
+                                       <p>To ignore this content:</p>
+                                       <p>
+                                          <code class="code">&lt;meta name=&quot;robots&quot; content=&quot;index,
+					follow&quot;&gt;</code>
+                                       </p>
+                                       <p>use:</p>
+                                       <p>
+                                          <code class="literal">name=robots</code>
+                                       </p>
+                                    </div>
+                                 </div>
+                                 <p>
+                                    <br class="example-break" />
+				  
+                                 </p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Ignored tags (attribute=value)</span>
+                              </dt>
+                              <dd>
+                                 <p>Define the attribute values that make a tag
+				  non-translatable.</p>
+                                 <p>Do not add quotation marks and separate the
+				  values with a comma.
+				  </p>
+                                 <div class="example" id="file.filters.xhtml.ignore.translate.no">
+                                    <div class="example-title">Example 28. Ignore tags that contain translate=&quot;no&quot;</div>
+                                    <div class="example-contents">
+                                       <p>To ignore this content:</p>
+                                       <p>
+                                          <code class="code">&lt;span translate=&quot;no&quot;&gt;This
+					content is not translatable&lt;/span&gt;</code>
+                                       </p>
+                                       <p>use: <code class="literal">translate=no</code>.</p>
+                                       <p>All the tags that are marked with
+					<code class="code">translate=&quot;no&quot;</code> will be ignored.</p>
+                                    </div>
+                                 </div>
+                                 <p>
+                                    <br class="example-break" />
+				  
+                                 </p>
+                              </dd>
+                           </dl>
+                        </div>
+                        <p>
+		  
+                        </p>
+                     </dd>
+                     <dt>
+                        <span class="term">HTML and XHTML files</span>
+                     </dt>
+                     <dd>
+                        <p>Only the options not available under the XHTML files filter
+			(see above) are described here.</p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Modify encoding declaration</span>
+                              </dt>
+                              <dd>
+                                 <p>The encoding of an HTML document is generally declared
+				  within a &lt;meta&gt; element situated in the &lt;head&gt;
+				  element.</p>
+                                 <p>Source and target files
+				  sometimes require a different encoding.</p>
+                                 <p>Here, you can decide whether to add or modify the
+				  declaration of the target file
+				  </p>
+                                 <div class="itemizedlist">
+                                    <ul class="itemizedlist" style="list-style-type: disc; ">
+                                       <li class="listitem">
+                                          <p>always, based on the file filter settings,</p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p>only  if the file already has a &lt;head&gt; tag,</p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p>only if the file already has a declaration,</p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p>or never and only save the target file in the
+					  encoding specified in the file filter settings.</p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <p>
+				  
+                                 </p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Compress whitespace in translated file</span>
+                              </dt>
+                              <dd>
+                                 <p>Whitespace outside the tags is considered non
+				  significant in HTML/XHTML.</p>
+                                 <p>This option converts such multiple continuous whitespace
+				  characters into a single space in the translated
+				  document.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Remove HTML comments in translated file</span>
+                              </dt>
+                              <dd>
+                                 <p>Comments within an HTML file are generally addressed to
+				  developers.</p>
+                                 <p>Text in HTML comments (between <code class="literal">&lt;!--</code>
+				  and <code class="literal">--&gt;</code>) will not be copied into the
+				  translated document.</p>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                     <dt id="file.filters.mozilla.ftl">
+                        <span class="term" id="file.filters.mozilla.ftl.title">Mozilla FTL</span>
+                     </dt>
+                     <dd>
+                        <p>
+			
+                        </p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Remove untranslated strings in the target
+				files</span>
+                              </dt>
+                              <dd>
+                                 <p>Having untranslated contents in the translated files
+				  sometimes create compatibility issues.</p>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                     <dt id="file.filters.mozilla.dtd">
+                        <span class="term" id="file.filters.mozilla.dtd.title">Mozilla DTD</span>
+                     </dt>
+                     <dd>
+                        <p>
+			
+                        </p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Remove untranslated strings in the target
+				files</span>
+                              </dt>
+                              <dd>
+                                 <p>Having untranslated contents in the translated files
+				  sometimes create compatibility issues.</p>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                     <dt id="file.filters.po">
+                        <span class="term" id="file.filters.po.title">PO files</span>
+                     </dt>
+                     <dd>
+                        <p>The filter checks printf variables ('%s', etc.) by default. See <a class="link" href="dialogs.preferences.html#dialogs.preferences.tag.processing.programming.variables">Check printf function variables</a> for details.</p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Allow blank target segments</span>
+                              </dt>
+                              <dd>
+                                 <p>OmegaT always reproduces the source contents when a
+				  segment is not provided. Use this option to leave a non
+				  translated segment blank.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Translate blank source segments</span>
+                              </dt>
+                              <dd>
+                                 <p>Blank source segments sometimes act as placeholders for
+				  parts that do not exist in the source language but are
+				  necessary in the target language. Use this option to provide a
+				  translation based on the associated comments.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Ignore PO header</span>
+                              </dt>
+                              <dd>
+                                 <p>The PO header will not be displayed for translation.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Auto replace plural specification</span>
+                              </dt>
+                              <dd>
+                                 <p>Override the plural specification in the header and use
+				  the target language default.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Format:</span>
+                              </dt>
+                              <dd>
+                                 <p>
+					
+                                 </p>
+                                 <div class="variablelist">
+                                    <dl class="variablelist">
+                                       <dt>
+                                          <span class="term">Standard</span>
+                                       </dt>
+                                       <dd>
+                                          <p>PO files that use <code class="literal">msgid</code> as
+						  the source container and expect the translation to be
+						  put in <code class="literal">msgstr</code>
+                                          </p>
+                                       </dd>
+                                       <dt>
+                                          <span class="term">Monolingual</span>
+                                       </dt>
+                                       <dd>
+                                          <p>PO files that use <code class="literal">msgid</code> as an
+						  ID code, use <code class="literal">msgstr</code> as the source
+						  container and expect the translation to overwrite
+						  <code class="literal">msgstr</code>
+                                          </p>
+                                       </dd>
+                                    </dl>
+                                 </div>
+                                 <p>
+				  
+                                 </p>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                     <dt id="file.filters.moodle.php">
+                        <span class="term" id="file.filters.moodle.php.title">Moodle PHP</span>
+                     </dt>
+                     <dd>
+                        <p>
+			
+                        </p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Remove untranslated strings in the target
+				files</span>
+                              </dt>
+                              <dd>
+                                 <p>Having untranslated contents in the translated files
+				  sometimes create compatibility issues.</p>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                     <dt id="file.filter.java.bundle">
+                        <span class="term" id="file.filter.java.bundle.title">Java Resource bundle</span>
+                     </dt>
+                     <dd>
+                        <p>The filter checks Java MessageFormat patterns (e.g. \{0\}) by default. See <a class="link" href="dialogs.preferences.html#dialogs.preferences.tag.processing.programming.variables">Check printf function variables</a> for details.</p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Force Unicode literals compatibility with Java 8</span>
+                              </dt>
+                              <dd>
+                                 <p>Java 8 requires ISO-8859-1 encoding and uses Unicode
+				  literals for characters outside that character set. Java 9 and
+				  above requires UTF-8 encoding. This option forces Java 8
+				  compatibility.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Remove untranslated strings in the target files</span>
+                              </dt>
+                              <dd>
+                                 <p>Having untranslated contents in the translated files
+				  sometimes create compatibility issues.</p>
+                              </dd>
+                              <dt>
+                                 <span class="term">Keep Unicode literals (\\uXXXX)</span>
+                              </dt>
+                              <dd>
+                                 <p>Some applications require some Unicode literals to be
+				  kept. This option allows for that.</p>
+                              </dd>
+                           </dl>
+                        </div>
+                     </dd>
+                     <dt id="file.filters.odf">
+                        <span class="term" id="file.filters.odf.title">Open Document Format (ODF) files</span>
+                     </dt>
+                     <dd>
+                        <p>
+	  
+                        </p>
+                        <div class="variablelist">
+                           <dl class="variablelist">
+                              <dt>
+                                 <span class="term">Translate the following elements</span>
+                              </dt>
+                              <dd>
+                                 <p>Index entries, bookmarks, bookmark
+			references, notes, comments, presentation notes,
+			links (URL), and sheet names.</p>
+                              </dd>
+                           </dl>
+                        </div>
+                        <p>
+	
+                        </p>
+                     </dd>
+                  </dl>
+               </div>
+            </section>
+         </section>
          <section class="section" id="app.segmentation">
             <div class="titlepage">
                <div>
@@ -265,7 +1210,7 @@
 		  lines, or not at all. Files containing formatting (ODF, HTML, or
 		  other documents) are divided at block-level (paragraph)
 		  tags. Translatable object attributes in XHTML or HTML files can be
-		  extracted as separate segments.</p>
+		  extracted as separate &quot;paragraphs&quot;.</p>
                      </dd>
                      <dt id="dialogs.preferences.segmentation.rules.sentence.level.segmentation">
                         <span class="term" id="dialogs.preferences.segmentation.rules.sentence.level.segmentation.title">Sentence-level
@@ -275,23 +1220,30 @@
                         <p>After dividing the source file into structural units, OmegaT
 		  further divides those units into segments.</p>
                         <p>You can visualize segmentation as the process of moving the
-		  cursor along the text, on character at a time. Each time the cursor
-		  moves to the next character, rules consisting of a <span class="bold">
-                              <strong>Before</strong>
-                           </span> and <span class="bold">
-                              <strong>After
-		  </strong>
-                           </span> pattern, are checked, in order, for a match with the 
-		  <span class="bold">
-                              <strong>Before</strong>
-                           </span> pattern on the left and the
-		  corresponding <span class="bold">
-                              <strong>After</strong>
-                           </span> pattern on the
-		  right. The first matching rule is applied, either by creating a new
-		  segment break at the current cursor position (for a break rule), or by
-		  moving the cursor to the next position without inserting a segment
-		  break (for an exception rule).</p>
+		  cursor along the text, one character at a time, and looking for the
+		  position where a break will occur, or where a break will not be
+		  allowed.</p>
+                        <p>Each time the cursor
+		  moves to the next character, OmegaT checks whether:
+		  </p>
+                        <div class="itemizedlist">
+                           <ul class="itemizedlist" style="list-style-type: disc; ">
+                              <li class="listitem">
+                                 <p>the text before the location corresponds to a <span class="bold">
+                                       <strong>Before</strong>
+                                    </span> rule,</p>
+                              </li>
+                              <li class="listitem">
+                                 <p>and the text after the location corresponds to the associated <span class="bold">
+                                       <strong>After</strong>
+                                    </span> rule.</p>
+                              </li>
+                           </ul>
+                        </div>
+                        <p>
+		  
+                        </p>
+                        <p>If the location matches both rules, it is considered either as a break, or as a non-break, depending of what the rule defined.</p>
                      </dd>
                   </dl>
                </div>
@@ -504,7 +1456,7 @@
                      <p>Segmentation rules and language patterns are defined with
         regular expressions. You can modify them freely to improve the
         segmentation of a document or add additional general rules. See
-        <a class="link" href="dialogs.preferences.html#dialogs.preferences.segmentation.setup" title="Global Segmentation Rules">Global Segmentation Rules</a> for
+        <a class="link" href="appendices.html#app.segmentation" title="Segmentation">Segmentation</a> for
         details.</p>
                      <p>Segmentation or exception rules define the position in a
         segment where a split will, or will not, be made. Two regular
@@ -2684,7 +3636,7 @@
                   </span> above enable us
       to avoid listing multiple notations for every shortcut.</p>
                <div class="example" id="example.avoid.listing.multiple.notations">
-                  <div class="example-title">Example 24. How we avoid listing multiple notations:</div>
+                  <div class="example-title">Example 29. How we avoid listing multiple notations:</div>
                   <div class="example-contents">
                      <p>On Windows and Linux:
 		  <span class="keycap">
@@ -2732,24 +3684,23 @@
     needs</a>) can help you streamline your work.</p>
                <p>This is best illustrated with an example:</p>
                <div class="example" id="example.shortcuts.streamline.workflow">
-                  <div class="example-title">Example 25. Using shortcuts
+                  <div class="example-title">Example 30. Using shortcuts
         to streamline the translation process</div>
                   <div class="example-contents">
                      <p>Picture a technical translator tasked with translating an updated
         version of a manual from a previous job.</p>
                      <p>Since the first few pages have not changed, the translator is
         greeted with a screenful of already translated segments from the
-        previous job's memory upon opening the project. Rather than tediously
-        scroll down until she finds the first segment to translate, the
-        translator quickly presses
-        <span class="keycap">
+        previous job's memory upon opening the project.</p>
+                     <p>Rather than tediously scroll down until she finds the first
+		segment to translate, the translator quickly presses
+		<span class="keycap">
                            <strong>C</strong>
                         </span>+<span class="keycap">
                            <strong>U</strong>
-                        </span> to
-        <a class="link" href="menus.html#menus.goto.next.untranslated.segment">jump
-        straight into the action</a> and start translating. (And doing so
-        again each time she reaches a large unchanged section.)</p>
+                        </span> to <a class="link" href="menus.html#menus.goto.next.untranslated.segment">jump straight into the
+		action</a> and start translating. (And doing so again each time she
+		reaches a large unchanged section.)</p>
                      <p>A few segments later, the translator comes across a term she
         should add to the glossary. Instead of reaching for the mouse, she unlocks the cursor with <a class="link" href="panes.html#panes.editor.cursor.lock">
                            <span class="keycap">
@@ -2768,12 +3719,14 @@
         the glossary entry dialog</a> to enter the source term, and then
         switches back to the editor and repeats the process to enter the target
         term.</p>
-                     <p>The translator has enabled the auto-completer to automatically
+                     <p>The translator has enabled the <a class="link" href="dialogs.preferences.html#dialog.preferences.auto.completion" title="Auto-Completion">Auto-Completion</a> to automatically
 		display not only history predictions, but also glossary terms, and
-    pre-defined short strings, which can be entered with simple arrow navigation.</p>
+		pre-defined short strings, which can be entered with simple arrow
+		navigation.</p>
                      <p>The translator then reaches a revised section of the text where
         the <a class="link" href="panes.html#panes.fuzzy.matches" title="Fuzzy Matches">Fuzzy Matches</a> pane shows a number of similar
-        segments from the previous job. After quickly tapping
+        segments from the previous job.</p>
+                     <p>After quickly tapping
         <span class="keycap">
                            <strong>C</strong>
                         </span>+<span class="keycap">
@@ -2792,7 +3745,8 @@
                         </span>+<span class="keycap">
                            <strong>I</strong>
                         </span> when one of
-        the matches from 2 to 5 is more suitable. By the time she gets near the
+        the matches from 2 to 5 is more suitable.</p>
+                     <p>By the time she gets near the
         end of the section, she has also used
         <span class="keycap">
                            <strong>C</strong>
@@ -2816,14 +3770,17 @@
                         </span>+<span class="keycap">
                            <strong>J</strong>
                         </span> to immediately
-        to that segment from the search dialog. Since she had noted the number of the segment she was in, she uses
-        <span class="keycap">
+        jump to that segment from the search dialog.</p>
+                     <p>Since OmegaT has registered her navigation history, she only needs
+		to use
+		<span class="keycap">
                            <strong>C</strong>
                         </span>+<span class="keycap">
+                           <strong>S</strong>
+                        </span>+<span class="keycap">
                            <strong>J</strong>
-                        </span> again in the
-        editor, enters the number in the dialog, and immediately continues from
-        where she left off.</p>
+                        </span>
+		to immediately continue from where she left off.</p>
                      <p>Time for a break. As she savors her coffee, the translator
         reflects on how much more smoothly she was able to use the various
         OmegaT functions compared to when she had just gotten started and spent
@@ -2834,7 +3791,7 @@
         session, she used the menu and cursor keys to select the
         <a class="link" href="menus.html#menus.edit.create.alternative.translation">Create
       Alternative Translation</a> function
-        several times, and decides to <a class="link" href="appendices.html#example.shortcut.addition" title="Example 27. Adding a shortcut">add a new shortcut</a> to
+        several times, and decides to <a class="link" href="appendices.html#example.shortcut.addition" title="Example 32. Adding a shortcut">add a new shortcut</a> to
         streamline that part of the process as well.</p>
                   </div>
                </div>
@@ -3018,7 +3975,7 @@
     default files to <a class="link" href="appendices.html#configuration.folder" title="Configuration Folder">your configuration
     folder</a>, as noted above, and make the changes you want there.</p>
                <div class="example" id="example.shortcut.modification">
-                  <div class="example-title">Example 26. Modifying a
+                  <div class="example-title">Example 31. Modifying a
       shortcut</div>
                   <div class="example-contents">
                      <p>The default shortcut for <a class="link" href="menus.html#menus.project.close">closing
@@ -3086,7 +4043,7 @@
                </div>
                <br class="example-break" />
                <div class="example" id="example.shortcut.addition">
-                  <div class="example-title">Example 27. Adding a shortcut</div>
+                  <div class="example-title">Example 32. Adding a shortcut</div>
                   <div class="example-contents">
                      <p>If your language pair calls for the frequent use <a class="link" href="menus.html#menus.edit.create.alternative.translation">alternative
       translations</a>, you may want to assign a shortcut to that function
@@ -4364,7 +5321,7 @@
                      </div>
                   </div>
                </div>
-               <p>The location of the configuration folder varies by system (the <span class="emphasis">
+               <p>The location of the default configuration folder varies by system (the <span class="emphasis">
                      <em>~</em>
                   </span> character represents your home directory):</p>
                <div class="variablelist">
@@ -4398,6 +5355,7 @@
                <p>
 	
                </p>
+               <p>You can also use non default configuration folders by starting OmegaT from the command line. See <a class="link" href="how.to.html#launch.with.command.line" title="Command line launch">Command line launch</a> for details</p>
             </section>
             <section class="section" id="configuration.folder.default.contents">
                <div class="titlepage">
@@ -4418,7 +5376,7 @@
                         <p>Some preference do not have an equivalent in the user interface. They must be modified manually.
 		</p>
                         <div class="example" id="no.source.file.display">
-                           <div class="example-title">Example 28. Do not automatically display the Source Files list</div>
+                           <div class="example-title">Example 33. Do not automatically display the Source Files list</div>
                            <div class="example-contents">
                               <p>To keep the Source Files list window to automatically open when a project is loaded,  find <span class="token">&lt;project_files_show_on_load&gt;</span> and replace <span class="token">true</span> to <span class="token">false</span>:</p>
                               <pre class="programlisting">&lt;project_files_show_on_load&gt;<span class="token">false</span>&lt;/project_files_show_on_load&gt;</pre>

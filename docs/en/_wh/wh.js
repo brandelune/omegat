@@ -556,18 +556,18 @@ var toc_entries = [
 ]],
 ["How To...","how.to.html",[
 ["Troubleshoot issues","how.to.html#how.to.restore.your.data",[
-["Automatic backups","how.to.html#how.to.restore.your.data.automatic.backup",null],
-["You lost your translation?","how.to.html#how.to.restore.your.data.lost.in.translation",null],
-["Your project won\'t open?","how.to.html#how.to.restore.your.data.project.wont.open",null],
-["Your translated file won\'t open?","how.to.html#how.to.restore.your.data.translated.file.broken",null],
-["OmegaT won\'t behave?","how.to.html#how.to.restore.your.data.omegat.wont.behave",null],
+["Automatic\n\tbackups","how.to.html#how.to.restore.your.data.automatic.backup",null],
+["You lost your\n\ttranslation?","how.to.html#how.to.restore.your.data.lost.in.translation",null],
+["Your project won’t open?","how.to.html#how.to.restore.your.data.project.wont.open",null],
+["Your translated file won’t open?","how.to.html#how.to.restore.your.data.translated.file.broken",null],
+["OmegaT won’t behave?","how.to.html#how.to.restore.your.data.omegat.wont.behave",null],
 ["Summary","how.to.html#how.to.restore.your.data.summary",null]
 ]],
 ["Support other formats","how.to.html#how.to.translate.other.files",[
-["Association","how.to.html#d0e784",null],
-["Conversion","how.to.html#d0e795",null],
-["Third-party plugin","how.to.html#d0e868",null],
-["Development","how.to.html#d0e903",null]
+["Association","how.to.html#d0e782",null],
+["Conversion","how.to.html#d0e793",null],
+["Third-party plugin","how.to.html#d0e866",null],
+["Development","how.to.html#d0e901",null]
 ]],
 ["Use translation memories","how.to.html#how.to.use.tm",[
 ["Create your own TMs","how.to.html#how.to.use.tm.create.your.tm",null],
@@ -675,11 +675,7 @@ var toc_entries = [
 ["Font","dialogs.preferences.html#dialogs.preferences.fonts",null],
 ["Colors","dialogs.preferences.html#dialogs.preferences.colours",null]
 ]],
-["Global File Filters","dialogs.preferences.html#dialogs.preferences.file.filters",[
-["Common preferences","dialogs.preferences.html#dialogs.preferences.file.filters.general",null],
-["Edit","dialogs.preferences.html#edit.filter.dialog",null],
-["Options","dialogs.preferences.html#filters.options",null]
-]],
+["Global File Filters","dialogs.preferences.html#dialogs.preferences.file.filters",null],
 ["Global Segmentation Rules","dialogs.preferences.html#dialogs.preferences.segmentation.setup",[
 ["Language\n\tsets","dialogs.preferences.html#dialogs.preferences.segmentation.setup.scope",null],
 ["Set contents","dialogs.preferences.html#segmentation.rules",null]
@@ -700,6 +696,11 @@ var toc_entries = [
 ["Updates","dialogs.preferences.html#dialogs.preferences.updates",null]
 ]],
 ["Appendices","appendices.html",[
+["File Filters","appendices.html#file.filters",[
+["Common preferences","appendices.html#file.filters.general",null],
+["Edit","appendices.html#edit.filter.dialog",null],
+["Options","appendices.html#filters.options",null]
+]],
 ["Segmentation","appendices.html#app.segmentation",[
 ["Paragraph or\n\tsentence?","appendices.html#dialog.preferences.segmentation.setup.type",null],
 ["Global or\n\tlocal?","appendices.html#dialog.preferences.segmentation.setup.scope",null],
@@ -1004,7 +1005,7 @@ message = translation[index];
 }
 return message;
 }
-var storageId = "1g930kmoc5ktt-1l3wmargooypy";
+var storageId = "u1wkgydmb8tt-1amhsijiib3uz";
 function storageSet(key, value) {
 window.sessionStorage.setItem(key + storageId, String(value));
 }

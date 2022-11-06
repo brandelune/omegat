@@ -3,14 +3,14 @@
    <head><meta charset="UTF-8" />
       <title>Panes</title>
       <link href="OmegaT_webhelp.css" rel="stylesheet" type="text/css" />
-      <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator" />
+      <meta content="DocBook XSL Stylesheets V1.79.1" name="generator" />
       <link href="how.to.html" rel="prev" title="How To..." />
       <link href="menus.html" rel="next" title="Menus" />
    <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="_wh/jquery/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
    
 <body>
     <div id="wh-header">
-    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide DRAFT</a></div></div>
+    <div class="logo"><a href="https://omegat.org/"><img alt="OmegaT" height="50" src="images/omegat.svg" style="border-style: none;" width="100" /></a></div><div class="title"><a href="index.html">OmegaT 5.8.0 - User Guide</a></div></div>
 
     <div id="wh-body">
       <div class="wh-icon-menu" id="wh-menu"></div>
@@ -283,16 +283,24 @@
             <p>This is where you type and edit your translations.</p>
             <p>The text is split into numbered segments. You can scroll through the
     document and double-click on any segment to open and edit it.</p>
-            <div class="figure" id="default.editor.target.field">
-               <div class="figure-title">Figure 5. Default editor writing
+            <div class="example" id="panes.editor.default.editor.writing.space">
+               <div class="example-title">Example 5. Default editor writing
       space</div>
-               <div class="figure-contents">
-                  <div class="mediaobject">
-                     <img alt="Default editor writing space" src="images/defaultEditorDisplay.png" />
-                  </div>
+               <div class="example-contents">
+                  <p>
+	  
+                  </p>
+                  <pre class="programlisting">— ¶ —————————————————————
+
+<span class="token">Remove Tags</span>
+|Supprimer les balises<span class="token">&lt;segment 2148 ¶&gt;</span>
+
+— ¶ —————————————————————
+
+When enabled, all the formatting tags are removed from source segments.</pre>
                </div>
             </div>
-            <br class="figure-break" />
+            <br class="example-break" />
             <div class="itemizedlist">
                <ul class="itemizedlist" style="list-style-type: disc; ">
                   <li class="listitem">
@@ -310,10 +318,10 @@
         you enter your translation.</p>
                   </li>
                   <li class="listitem">
-                     <p>The segment marker here is <code class="literal">&lt;segment 0400
+                     <p>The segment marker here is <code class="literal">&lt;segment 2148
         ¶&gt;</code>.</p>
                      <p>
-                        <code class="literal">0400</code> is the number of the segment in the
+                        <code class="literal">2148</code> is the number of the segment in the
         project and the <code class="literal">¶</code> symbol indicates that the segment
         is the first segment in a paragraph.</p>
                   </li>
@@ -357,17 +365,7 @@
             <div class="note">
                <h3 class="title">Note</h3>
                <p>Modify the Editor display to suit your workflow. See the <a class="link" href="dialogs.preferences.html#dialogs.preferences.editor" title="Editor">Editor</a> preferences for details.</p>
-               <div class="figure" id="modified.editor.target.field">
-                  <div class="figure-title">Figure 6. Example of modified
-        editor writing space</div>
-                  <div class="figure-contents">
-                     <div class="mediaobject">
-                        <img alt="Example of modified editor writing space" src="images/modifiedEditorDisplay.png" />
-                     </div>
-                  </div>
-               </div>
-               <br class="figure-break" />
-               <p>The modifications here include:</p>
+               <p>Modifications can include:</p>
                <div class="itemizedlist">
                   <ul class="itemizedlist" style="list-style-type: disc; ">
                      <li class="listitem">
@@ -619,7 +617,7 @@
                   <strong>2, 3, 4, 5</strong>
                </span> to select a different match.</p>
             <div class="example" id="the.first.match">
-               <div class="example-title">Example 4. The first match</div>
+               <div class="example-title">Example 6. The first match</div>
                <div class="example-contents">
                   <p>
 		  
@@ -690,7 +688,7 @@ Dossier de configuration
     glossary are shown in bold, while those from other glossaries are
     presented as regular text.</p>
             <div class="example" id="glossary.matches">
-               <div class="example-title">Example 5. Glossary matches</div>
+               <div class="example-title">Example 7. Glossary matches</div>
                <div class="example-contents">
                   <p>
 		
@@ -912,7 +910,7 @@ Folder = <span class="token">Dossier</span>
             <p>The left side displays information about actions taken in the project
 	or error messages.</p>
             <div class="example" id="panes.statusbar.messages">
-               <div class="example-title">Example 6. Status bar messages examples</div>
+               <div class="example-title">Example 8. Status bar messages examples</div>
                <div class="example-contents">
                   <p>
                      <code class="literal">Synchronization of repositories</code>
@@ -938,7 +936,7 @@ Folder = <span class="token">Dossier</span>
             <p>Click on the figures to alternate between displaying progress as numbers or
     percentages.</p>
             <div class="example" id="panes.statusbar.widgets">
-               <div class="example-title">Example 7. Status bar progress
+               <div class="example-title">Example 9. Status bar progress
       information</div>
                <div class="example-contents">
                   <p>
@@ -996,7 +994,7 @@ Folder = <span class="token">Dossier</span>
             </div>
             <br class="example-break" />
             <div class="example" id="panes.statusbar.widgets.percentage">
-               <div class="example-title">Example 8. Status bar progress
+               <div class="example-title">Example 10. Status bar progress
       information, percentage mode</div>
                <div class="example-contents">
                   <p>

@@ -375,7 +375,7 @@ public class ProjectPropertiesDialog extends JDialog {
 
         // File Filters
         JButton fileFiltersButton = new JButton();
-        Mnemonics.setLocalizedText(fileFiltersButton, OStrings.getString("WM_PROJECTMENU_LOCAL_FILEFILTERS"));
+        Mnemonics.setLocalizedText(fileFiltersButton, OStrings.getString("TF_MENU_DISPLAY_LOCAL_FILTERS"));
         gbc.gridx = 1;
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.EAST;
