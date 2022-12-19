@@ -43,7 +43,7 @@
   triggered automatically when a given event takes place. Each event corresponds
   to a subfolder under <link
   linkend="application.folder.scripts"
-  endterm="application.folder.scripts.title"/>:
+  endterm="application.folder.scripts.title"/>:</para>
 
   <variablelist>
 	<varlistentry id="application.folder.scripts.application.shutdown">
@@ -71,9 +71,16 @@
 	  <listitem><para>Scripts in the folder will be launched when the state of the project changes. An "eventType" object is bound and can take the following values: CLOSE, COMPILE, CREATE, LOAD, SAVE.</para></listitem>
 	</varlistentry>
   </variablelist>
-  </para>
-	<warning><para>Scripts are also launched when you are executing other scripts. That means
-that on a large project, an "entry_activated" script will be called a lot of time when using a search/replace type of script that loops through all the segments, rendering the application unresponsive. </para></warning>
+
+  <para>The folders are already created in the script folder that comes with the
+  distribution.</para>
+  
+  <warning>
+	<para>Scripts are also launched when you are executing other scripts. That
+	means that on a large project, an "entry_activated" script will be called a
+	lot of time when using a search/replace type of script that loops through
+	all the segments, rendering the application unresponsive. </para>
+  </warning>
   </section>
   
 
@@ -418,10 +425,20 @@ that on a large project, an "entry_activated" script will be called a lot of tim
     </variablelist>
   </section>
 
-  <section id="windows.scripts.languages">
-    <title id="windows.scripts.languages.title">Languages</title>
+  <section id="windows.scripts.references">
+    <title id="windows.scripts.references.title">References</title>
 
     <variablelist>
+      <varlistentry>
+        <term>OmegaT Javadoc</term>
+
+        <listitem>
+          <para>The <ulink
+          url="https://omegat.sourceforge.io/javadoc-latest/">OmegaT API</ulink>
+          documentation.</para>
+        </listitem>
+      </varlistentry>
+
       <varlistentry>
         <term>Groovy</term>
 
@@ -429,7 +446,7 @@ that on a large project, an "entry_activated" script will be called a lot of tim
           <para>A dynamic language for the Java Virtual machine. It builds upon
           the strengths of Java, and adds powerful features inspired by
           languages like Python, Ruby and Smalltalk. See <ulink
-          url="https://groovy-lang.org">Apache Groovy</ulink> for
+          url="https://groovy-lang.org/documentation.html">Apache Groovy</ulink> for
           details.</para>
         </listitem>
       </varlistentry>
@@ -444,9 +461,11 @@ that on a large project, an "entry_activated" script will be called a lot of tim
           programming styles. See <ulink
           url="https://developer.oracle.com/databases/nashorn-javascript-part1.html">Practical
           Nashorn, Part 1: Introducing JavaScript, ECMAScript, and
-          Nashorn</ulink></para>
+          Nashorn</ulink> and <ulink
+          url="https://www.ecma-international.org/ecma-262/5.1/">ECMAScript® 5.1
+          Language Specification</ulink>.</para>
         </listitem>
-      </varlistentry>
+      </varlistentry>	  
     </variablelist>
 
     <para>All languages have access to the OmegaT object model, with the project
