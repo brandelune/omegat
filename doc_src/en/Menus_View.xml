@@ -114,8 +114,8 @@
       id="menus.view.mark.auto.populated.segments.title"><guimenuitem>Highlight
       Auto-Populated Segments</guimenuitem></term>
       <listitem>
-        <para>If checked, segments that have been auto-populated will be
-        displayed in various colors.</para>
+        <para>If checked, segments that have been auto-populated are
+        highlighted in various colors.</para>
 
 		<para>See the <link
 		linkend="dialogs.preferences.editor.save.auto-populated.status"
