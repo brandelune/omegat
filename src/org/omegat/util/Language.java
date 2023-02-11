@@ -215,7 +215,8 @@ public class Language implements Comparable<Object> {
      * variants (e.g., EN-US, EN-GB), they have been kept only when there are
      * more than one variant (e.g., JA-JP has been left commented).
      */
-    private static final Language[] LANGUAGES = new Language[] { new Language("AA"), // AFAR
+    private static final Language[] LANGUAGES = new Language[] {
+            new Language("AA"), // AFAR
             // new Language("AA-ET"), // AFAR (ETHIOPIA)
             new Language("AA-DJ"), // AFAR (DJIBOUTI)
             new Language("AA-ER"), // AFAR (ERITREA)
@@ -247,19 +248,17 @@ public class Language implements Comparable<Object> {
             new Language("AR-TN"), // ARABIC (TUNISIA)
             new Language("AR-US"), // ARABIC (UNITED STATES)
             new Language("AR-YE"), // ARABIC (YEMEN)
-
             new Language("AS"), // ASSAMESE
             new Language("AV"), // AVARIC
             new Language("AY"), // AYMARA
             new Language("AZ"), // AZERBAIJANI
             // new Language("AZ-AZ"), // AZERBAIJANI (AZERBAIJAN)
-            new Language("BA"), // BASHKIR
 
+            new Language("BA"), // BASHKIR
             new Language("BE"), // BELARUSIAN
             // new Language("BE-BY"), // BELARUSIAN (BELARUS)
             new Language("BG"), // BULGARIAN
             // new Language("BG-BG"), // BULGARIAN (BULGARIA)
-
             new Language("BH"), // BIHARI
             new Language("BI"), // BISLAMA
             new Language("BM"), // BAMBARA
@@ -271,15 +270,12 @@ public class Language implements Comparable<Object> {
 
             new Language("CA"), // CATALAN
             // new Language("CA-ES"), // CATALAN (SPAIN)
-
             new Language("CE"), // CHECHEN
             new Language("CH"), // CHAMORRO
             new Language("CO"), // CORSICAN
             new Language("CR"), // CREE
-
             new Language("CS"), // CZECH
             // new Language("CS-CZ"), // CZECH (CZECH REPUBLIC)
-
             new Language("CU"), // CHURCH SLAVIC; OLD SLAVONIC; CHURCH SLAVONIC;
                                 // OLD BULGARIAN; OLD CHURCH SLAVONIC
             new Language("CV"), // CHUVASH
@@ -292,12 +288,11 @@ public class Language implements Comparable<Object> {
             new Language("DE-CH"), // GERMAN (SWITZERLAND)
             new Language("DE-DE"), // GERMAN (GERMANY)
             new Language("DE-LU"), // GERMAN (LUXEMBOURG)
-
             new Language("DV"), // DIVEHI
             new Language("DZ"), // DZONGKHA
             // new Language("DZ-BT"), // DZONGKHA (BHUTAN)
-            new Language("EE"), // EWE
 
+            new Language("EE"), // EWE
             new Language("EL"), // GREEK
             // new Language("EL-GR"), // GREEK (GREECE)
             new Language("EN"), // ENGLISH
@@ -309,9 +304,7 @@ public class Language implements Comparable<Object> {
             new Language("EN-NZ"), // ENGLISH (NEW ZEALAND)
             new Language("EN-US"), // ENGLISH (UNITED STATES)
             new Language("EN-ZA"), // ENGLISH (SOUTH AFRICA)
-
             new Language("EO"), // ESPERANTO
-
             new Language("ES"), // SPANISH
             new Language("ES-AR"), // SPANISH (ARGENTINA)
             new Language("ES-BO"), // SPANISH (BOLIVIA)
@@ -333,66 +326,51 @@ public class Language implements Comparable<Object> {
             new Language("ES-US"), // SPANISH (UNITED STATES)
             new Language("ES-UY"), // SPANISH (URUGUAY)
             new Language("ES-VE"), // SPANISH (VENEZUELA)
-
             new Language("ET"), // ESTONIAN
             // new Language("ET-EE"), // ESTONIAN (ESTONIA)
-
             new Language("EU"), // BASQUE
 
             new Language("FA"), // PERSIAN; FARSI
             new Language("FA-AF"), // PERSIAN; FARSI (AFGANISTAN)
             new Language("FA-IR"), // PERSIAN; FARSI (IRAN)
-
             new Language("FF"), // FULAH
-
             new Language("FI"), // FINNISH
             // new Language("FI-FI"), // FINNISH (FINLAND)
-
             new Language("FJ"), // FIJIAN
             // new Language("FJ-FJ"), // FIJIAN (FIJI)
             new Language("FO"), // FAROESE
-
             new Language("FR"), // FRENCH
             new Language("FR-BE"), // FRENCH (BELGIUM)
             new Language("FR-CA"), // FRENCH (CANADA)
             new Language("FR-CH"), // FRENCH (SWITZERLAND)
             new Language("FR-FR"), // FRENCH (FRANCE)
             new Language("FR-LU"), // FRENCH (LUXEMBOURG)
-
             new Language("FY"), // FRISIAN
 
             new Language("GA"), // IRISH
             // new Language("GA-IE"), // IRISH (IRELAND)
-
             new Language("GD"), // GAELIC; SCOTTISH GAELIC
-
             new Language("GL"), // GALLEGAN
             new Language("GN"), // GUARANI
             new Language("GU"), // GUJARATI
             new Language("GV"), // MANX
-            new Language("HA"), // HAUSA
 
+            new Language("HA"), // HAUSA
             new Language("HE"), // HEBREW
             // new Language("HE-IL"), // HEBREW (ISRAEL)
-
             new Language("HI"), // HINDI
             // new Language("HI-IN"), // HINDI (INDIA)
-
             new Language("HO"), // HIRI MOTU
-
             new Language("HR"), // CROATIAN
             // new Language("HR-HR"), // CROATIAN (CROATIA)
-
             new Language("HT"), // HAITIAN; HAITIAN CREOLE
             // new Language("HT-HT"), // HAITIAN; HAITIAN CREOLE (HAITI)
-
             new Language("HU"), // HUNGARIAN
             // new Language("HU-HU"), // HUNGARIAN (HUNGARY)
-
             new Language("HY"), // ARMENIAN
             // new Language("HY-AM"), // ARMENIAN (ARMENIA)
-
             new Language("HZ"), // HERERO
+
             new Language("IA"), // INTERLINGUA; INTERNATIONAL AUXILIARY
             new Language("ID"), // INDONESIAN
             // new Language("ID-ID"), // INDONESIAN (INDONESIA)
@@ -401,45 +379,35 @@ public class Language implements Comparable<Object> {
             new Language("II"), // SICHUAN YI
             new Language("IK"), // INUPIAQ
             new Language("IO"), // IDO
-
             new Language("IS"), // ICELANDIC
             // new Language("IS-IS"), // ICELANDIC (ICELAND)
-
             new Language("IT"), // ITALIAN
             new Language("IT-CH"), // ITALIAN (SWITZERLAND)
             new Language("IT-IT"), // ITALIAN (ITALY)
-
             new Language("IU"), // INUKTITUT
 
             new Language("JA"), // JAPANESE
             // new Language("JA-JP"), // JAPANESE (JAPAN)
-
             new Language("JV"), // JAVANESE
 
             new Language("KA"), // GEORGIAN
             // new Language("KA-GE"), // GEORGIAN (GEORGIA)
-
             new Language("KG"), // KONGO
             new Language("KI"), // KIKUYU; GIKUYU
             new Language("KJ"), // KUANYAMA; KWANYAMA
-
             new Language("KK"), // KAZAKH
             // new Language("KK-KZ"), // KAZAKH (KAZAKHSTAN)
-
             new Language("KL"), // KALAALLISUT; GREENLANDIC
             new Language("KM"), // KHMER
             // new Language("KM-KH"), // KHMER (CAMBODIA)
             new Language("KN"), // KANNADA
-
             new Language("KO"), // KOREAN
             // new Language("KO-KR"), // KOREAN (SOUTH KOREA)
-
             new Language("KR"), // KANURI
             new Language("KS"), // KASHMIRI
             new Language("KU"), // KURDISH
             new Language("KV"), // KOMI
             new Language("KW"), // CORNISH
-
             new Language("KY"), // KIRGHIZ
             // new Language("KY-KG"), // KIRGHIZ (KYRGYZSTAN)
 
@@ -451,12 +419,9 @@ public class Language implements Comparable<Object> {
             new Language("LN"), // LINGALA
             new Language("LO"), // LAO
             // new Language("LO-LA"), // LAO (LAO)
-
             new Language("LT"), // LITHUANIAN
             // new Language("LT-LT"), // LITHUANIAN (LITHUANIA)
-
             new Language("LU"), // LUBA-KATANGA
-
             new Language("LV"), // LATVIAN (LETTISH)
             // new Language("LV-LV"), // LATVIAN (LETTISH) (LATVIA)
 
@@ -465,18 +430,13 @@ public class Language implements Comparable<Object> {
             new Language("MH"), // MARSHALLESE
             // new Language("MH-MH"), // MARSHALLESE (MARSHALL ISLANDS)
             new Language("MI"), // MAORI
-
             new Language("MK"), // MACEDONIAN
             // new Language("MK-MK"), // MACEDONIAN (MACEDONIA)
-
             new Language("ML"), // MALAYALAM
-
             new Language("MN"), // MONGOLIAN
             // new Language("MN-MN"), // MONGOLIAN (MONGOLIA)
-
             new Language("MO"), // MOLDAVIAN
             // new Language("MO-MD"), // MOLDAVIAN (MOLDOVA)
-
             new Language("MR"), // MARATHI
             new Language("MS"), // MALAY
             // new Language("MS-MY"), // MALAY (MALAYSIA)
@@ -484,60 +444,53 @@ public class Language implements Comparable<Object> {
             // new Language("MT-MT"), // MALTESE (MALTA)
             new Language("MY"), // BURMESE
             // new Language("MY-MM"), // BURMESE (MYANMAR)
-            new Language("NA"), // NAURU
 
+            new Language("NA"), // NAURU
             new Language("NB"), // NORWEGIAN BOKM?L; BOKM?L, NORWEGIAN
             // new Language("NB-NO"), // BOKM?L (NORWAY)
-
             new Language("ND"), // NDEBELE, NORTH; NORTH NDEBELE
             new Language("NE"), // NEPALI
             // new Language("NE-NP"), // NEPALI (NEPAL)
             new Language("NG"), // NDONGA
-
             new Language("NL"), // DUTCH
             new Language("NL-BE"), // DUTCH (BELGIUM)
             new Language("NL-NL"), // DUTCH (NETHERLANDS)
-
             new Language("NN"), // NORWEGIAN NYNORSK; NYNORSK, NORWEGIAN
             // new Language("NN-NO"), // NYNORSK (NORWAY)
-
             new Language("NO"), // NORWEGIAN
             // new Language("NO-NO"), // NORWEGIAN (NORWAY)
-
             new Language("NR"), // NDEBELE, SOUTH; SOUTH NDEBELE
             new Language("NV"), // NAVAJO; NAVAHO
             new Language("NY"), // CHICHEWA; CHEWA; NYANJA
+
             new Language("OC"), // OCCITAN (POST 1500); PROVEN?AL
             new Language("OJ"), // OJIBWA
             new Language("OM"), // OROMO
             new Language("OR"), // ORIYA
             new Language("OS"), // OSSETIAN; OSSETIC
+
             new Language("PA"), // PANJABI; PUNJABI
             new Language("PA-IN"), // PANJABI; PUNJABI (INDIA)
             new Language("PA-PK"), // PANJABI; PUNJABI (PAKISTAN)
             new Language("PI"), // PALI
-
             new Language("PL"), // POLISH
             // new Language("PL-PL"), // POLISH (POLAND)
-
             new Language("PS"), // PUSHTO
-
             new Language("PT"), // PORTUGUESE
             new Language("PT-BR"), // PORTUGUESE (BRAZIL)
             new Language("PT-PT"), // PORTUGUESE (PORTUGAL)
 
             new Language("QU"), // QUECHUA
+
             new Language("RM"), // RAETO-ROMANCE
             new Language("RN"), // RUNDI
-
             new Language("RO"), // ROMANIAN
             // new Language("RO-RO"), // ROMANIAN (ROMANIA)
-
             new Language("RU"), // RUSSIAN
             new Language("RU-BY"), // RUSSIAN (BELORUS)
             new Language("RU-RU"), // RUSSIAN (RUSSIA)
-
             new Language("RW"), // KINYARWANDA
+
             new Language("SA"), // SANSKRIT
             new Language("SC"), // SARDINIAN
             new Language("SD"), // SINDHI
@@ -545,46 +498,35 @@ public class Language implements Comparable<Object> {
             new Language("SD-PK"), // SINDHI (PAKISTAN)
             new Language("SE"), // NORTHERN SAMI
             new Language("SG"), // SANGO
-
             new Language("SH"), // SERBO-CROATIAN
             new Language("SI"), // SINHALA; SINHALESE
-
             new Language("SK"), // SLOVAK
             // new Language("SK-SK"), // SLOVAK (SLOVAKIA)
-
             new Language("SL"), // SLOVENIAN
             // new Language("SL-SI"), // SLOVENIAN (SLOVENIA)
-
             new Language("SM"), // SAMOAN
             new Language("SM-AS"), // SAMOAN (AMERICAN SAMOA)
             new Language("SM-WS"), // SAMOAN (SAMOA)
-
             new Language("SN"), // SHONA
             new Language("SO"), // SOMALI
             // new Language("SO-SO"), // SOMALI (SOMALIA)
-
             new Language("SQ"), // ALBANIAN
             // new Language("SQ-AL"), // ALBANIAN (ALBANIA)
-
             new Language("SR"), // SERBIAN
             // new Language("SR-CS"), // SERBIAN (SERBIA AND MONTENEGRO)
-
             new Language("SS"), // SWATI
             new Language("ST"), // SOTHO, SOUTHERN
             new Language("SU"), // SUNDANESE
-
             new Language("SV"), // SWEDISH
             // new Language("SV-SE"), // SWEDISH (SWEDEN)
-
             new Language("SW"), // SWAHILI
+
             new Language("TA"), // TAMIL
             new Language("TE"), // TELUGU
             new Language("TG"), // TAJIK
             // new Language("TG-TJ"), // TAJIK (TAJIKISTAN)
-
             new Language("TH"), // THAI
             // new Language("TH-TH"), // THAI (THAILAND)
-
             new Language("TI"), // TIGRINYA
             new Language("TK"), // TURKMEN
             // new Language("TK-TM"), // TURKMEN (TURKMENISTAN)
@@ -592,43 +534,40 @@ public class Language implements Comparable<Object> {
             new Language("TN"), // TSWANA
             new Language("TO"), // TONGA
             // new Language("TO-TO"), // TONGA (TONGA ISLANDS)
-
             new Language("TR"), // TURKISH
             // new Language("TR-TR"), // TURKISH (TURKEY)
-
             new Language("TS"), // TSONGA
-
             new Language("TT"), // TATAR
-
             new Language("TW"), // TWI
             new Language("TY"), // TAHITIAN
-            new Language("UG"), // UIGHUR; UYGHUR
 
+            new Language("UG"), // UIGHUR; UYGHUR
             new Language("UK"), // UKRAINIAN
             // new Language("UK-UA"), // UKRAINIAN (UKRAINE)
-
             new Language("UR"), // URDU
             new Language("UR-IN"), // URDU (INDIA)
             new Language("UR-PK"), // URDU (PAKISTAN)
-
             new Language("UZ"), // UZBEK
             // new Language("UZ-UZ"), // UZBEK (UZBEKISTAN)
+
             new Language("VE"), // VENDA
             new Language("VI"), // VIETNAMESE
             // new Language("VI-VN"), // VIETNAMESE (VIETNAM)
             new Language("VO"), // VOLAPUK
+
             new Language("WA"), // WALLOON
             new Language("WO"), // WOLOF
+
             new Language("XH"), // XHOSA
+
             new Language("YI"), // YIDDISH
             new Language("YO"), // YORUBA
-            new Language("ZA"), // ZHUANG; CHUANG
 
+            new Language("ZA"), // ZHUANG; CHUANG
             new Language("ZH"), // CHINESE
             new Language("ZH-CN"), // CHINESE SIMPLIFIED (CHINA)
             new Language("ZH-HK"), // CHINESE (HONG KONG)
             new Language("ZH-TW"), // CHINESE TRADITIONAL (TAIWAN)
-
             new Language("ZU"), // ZULU
 
     };
